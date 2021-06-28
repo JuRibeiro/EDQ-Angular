@@ -1,0 +1,10 @@
+.tela-cheia{
+    height: 100vh;
+}
+
+@media (max-width: 770px) {
+    .button-wide{
+        width: 100%;
+
+    }
+}

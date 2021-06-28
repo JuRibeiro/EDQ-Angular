@@ -1,4 +1,9 @@
-# EDQAngular
+# EDQ: <br>  A plataforma que iguala o seu conhecimento.
+
+## 🎯 O Projeto
+![Imagem da ODS-4 da ONU](https://i.imgur.com/j0dqaUt.png)
+
+Esse projeto surgiu pelo desafio proposto pela <a>Generation Brasil</a>, onde os alunos deveriam pensar em uma rede social ou e-commerce que auxiliasse na resolução do Objetivo de Desenvolvimento Sustentável (ODS) 4 da ONU. Assim os grupos desenvolveram um projeto que abrange o Front-end, Back-end e Banco de dados com suas respectivas tecnologias.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
 

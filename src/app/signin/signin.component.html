@@ -5,7 +5,7 @@
 
       <div class="form-group mt-3">
         <label for="nome">Nome:</label>
-        <input
+        <input [(ngModel)]='user.nomeCompleto'
           class="form-control"
           type="text"
           name="nome"
@@ -15,8 +15,8 @@
       </div>
 
       <div class="form-group mt-3">
-        <label for="usuario">E-mail:</label>
-        <input
+        <label for="email">E-mail:</label>
+        <input [(ngModel)]='user.email'
           class="form-control"
           type="text"
           name="email"
@@ -27,7 +27,7 @@
 
       <div class="form-group mt-3">
         <label for="foto">Link da Foto</label>
-        <input
+        <input [(ngModel)]='user.foto'
           class="form-control"
           type="text"
           name="foto"
@@ -38,7 +38,7 @@
 
       <div class="form-group mt-3">
         <label for="senha">Senha</label>
-        <input
+        <input (input)='confirmeSenha($event)'
           class="form-control"
           type="password"
           name="senha"
@@ -49,7 +49,7 @@
 
       <div class="form-group mt-3">
         <label for="confirmSenha">Confirmar Senha</label>
-        <input
+        <input [(ngModel)]='user.senha'
           class="form-control"
           type="password"
           name="confirmSenha"
@@ -60,7 +60,7 @@
 
       <div class="form-group mt-3">
         <label for="tipo">Tipo de Usuário</label>
-        <select class="form-control" name="tipo" id="tipo">
+        <select (change)='tipoUser($event)' class="form-control" name="tipo" id="tipo">
           <option>Selecione um tipo de usuário</option>
           <option value="aluno">Aluno</option>
           <option value="adm">Administrador</option>
@@ -68,7 +68,7 @@
       </div>
 
       <div class="d-flex justify-content-center mt-3">
-        <button type="submit" class="btn btn-success me-3">Cadastrar</button>
+        <button (click)='cadastrar()' type="submit" class="btn btn-success me-3">Cadastrar</button>
         <button type="submit" class="btn btn-danger" routerLink='/homepage'>Cancelar</button>
       </div>
     </div>

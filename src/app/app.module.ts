@@ -16,6 +16,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { PlataformaComponent } from './plataforma/plataforma.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     HomepageComponent,
     SigninComponent,
     ProfileComponent,
-    ContactComponent
+    ContactComponent,
+    PlataformaComponent
   ],
   imports: [
     BrowserModule,

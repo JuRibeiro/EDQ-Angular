@@ -10,6 +10,7 @@ import { TeamComponent } from './team/team.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { SigninComponent } from './signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     TeamComponent,
     FooterComponent,
     LoginComponent,
-    HomepageComponent
+    HomepageComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,

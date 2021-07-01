@@ -14,9 +14,12 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { SigninComponent } from './signin/signin.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ContactComponent } from './contact/contact.component';
+
+import { NavbarLoggedinComponent } from './navbar-loggedin/navbar-loggedin.component';
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { PlataformaComponent } from './plataforma/plataforma.component';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +34,7 @@ import { PlataformaComponent } from './plataforma/plataforma.component';
     SigninComponent,
     ProfileComponent,
     ContactComponent,
+    NavbarLoggedinComponent,
     PlataformaComponent
   ],
   imports: [

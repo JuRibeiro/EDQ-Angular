@@ -1,0 +1,9 @@
+.tela{
+    height: 100vh;
+}
+.borda-redonda{
+    border-radius: 15px;
+}
+.perfil{
+    max-width: 200px;
+}

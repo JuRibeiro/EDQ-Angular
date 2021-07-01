@@ -5,7 +5,7 @@ export class Postagem{
     public id: number
     public titulo: string
     public descricao: string
-    public data: Date
+    public data_postagem: Date
     public link_video: string
     public usuario: User
     public tema: Tema

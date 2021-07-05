@@ -1,29 +1,48 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary sticky-top">
 
+    <!-- BOTÃO SIDEBAR E LOGO -->
     <div>
-        <button class="btn ms-2" type="button" data-bs-toggle="modal" data-bs-target="#sidebar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <button class="btn ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample"><span class="navbar-toggler-icon"></span></button>
+    </div>
+    <div>
+        <span><a class="navbar-brand m-3" href="#home"><img src="../../assets/img/logo1.png" width="45px" alt="Logo EDQ"></a></span>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"><a class="navbar-brand" href="#home">
+                    <img src="../../assets/img/logo1.png" width="60px" alt="Logo EDQ">
+                </a></h5>
+            <button type="button" class="btn-close btn-danger text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                A plataforma que iguala seu conhecimento.
+            </div>
+            <div class="dropdown mt-3 text-center">
+                <button class="btn-lg btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-bs-toggle="dropdown">Matérias
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Português</a></li>
+                    <li><a class="dropdown-item" href="#">Matemática</a></li>
+                    <li><a class="dropdown-item" href="#">Física</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-0 mb-lg-0 d-flex align-items-center">
-                <li>
-                    <a class="navbar-brand" href="#home">
-                        <img src="../../assets/img/logo1.png" width="45px" alt="Logo EDQ">
-                    </a>
-                </li>
                 <li class="nav-item p-0 me-3">
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Busca..."
-                            aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <input class="form-control me-2" type="search" placeholder="Busca..." aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                 <path
                                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                             </svg></button>
@@ -55,28 +74,3 @@
         </div>
     </div>
 </nav>
-
-<!-- 
-<div class="modal-sm modal fade left" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-    <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">MENU</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-
-    <div class="modal-body">
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">HOME</li>
-            <li class="list-group-item">DOCUMENTOS</li>
-            <li class="list-group-item">APLICATIVO</li>
-            <li class="list-group-item">CONTATOS</li>
-            <li class="list-group-item">SOBRE</li>
-        </ul>
-    </div>
-
-    <div class="modal-footer-center">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-    </div>
-</div> -->

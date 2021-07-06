@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-navbar-loggedin',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarLoggedinComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+
+  sair(){
+    this.router.navigate(['/login'])
+    environment.token=''
+    environment.nomeCompleto=''
+    environment.email=''
+    environment.foto=''
+    environment.id=0
+
   }
 
 }

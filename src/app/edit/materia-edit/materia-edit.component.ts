@@ -22,10 +22,11 @@ export class MateriaEditComponent implements OnInit {
   ngOnInit() {
 
     if (environment.token == ''){
-      this.router.navigate(['/inicio'])
+      this.router.navigate(['/login'])
     }
 
     let id = this.route.snapshot.params['id']
+    this.findByIdTema(id)
   }
 
   findByIdTema(id: number){

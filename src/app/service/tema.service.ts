@@ -24,7 +24,7 @@ export class TemaService {
   }
 
   getByIdTema(id:number):Observable<Tema>{
-    return this.http.get<Tema>(`http://localhost:8080/temas/${id}`,this.token)
+    return this.http.get<Tema>(`${environment.uri}/temas/${id}`,this.token)
   }
 
   getAllTema():Observable<Tema[]>{
@@ -34,8 +34,7 @@ export class TemaService {
   }
 
   postTema(tema:Tema):Observable<Tema>{
-    return this.http.post<Tema>(
-      'http://localhost:8080/temas',tema,this.token
+    return this.http.post<Tema>(`${environment.uri}/temas`,tema,this.token
     )
   }
 
@@ -46,6 +45,6 @@ export class TemaService {
   }
 
   deleteTema(id:number){
-    return this.http.delete(`http://localhost:8080/temas/${id}`,this.token)
+    return this.http.delete(`${environment.uri}/temas/${id}`,this.token)
   }
 }

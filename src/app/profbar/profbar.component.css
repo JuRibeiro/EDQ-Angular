@@ -1,6 +1,29 @@
-.img-bg{
-    background-image: url(../../assets/img/prof.svg);
-    background-repeat: no-repeat;
-    background-size: 30em;
-    -webkit-background-composite: local;
+
+.bg-2{
+    background-color: aqua;
+    background-position: bottom;
+    height: 40vh;
+}
+
+#profbar{
+/*     position: absolute;
+    bottom: 10em;*/
+    left: 15em;
+    bottom: 29em;
+    height: 70vh;
+    max-height: 600px;
+}
+.fundo{
+    height: 80vh;
+}
+@media ( max-width:991px) {
+    #profbar{
+        height: 50vh;
+        left: 10em;
+    }
+}
+@media (max-width:767px) {
+    #profbar{
+        display: none;
+    }
 }

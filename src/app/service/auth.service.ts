@@ -9,18 +9,18 @@ import { UserLogin } from '../model/UserLogin';
   providedIn: 'root'
 })
 export class AuthService {
-
+ 
   constructor(
     private http: HttpClient
   ) { }
 
   entrar(userLogin: UserLogin): Observable<UserLogin> {
-    return this.http.post<UserLogin>('http://localhost:8080/usuarios/login', userLogin)
+    return this.http.post<UserLogin>(`${environment.uri}/usuarios/login`, userLogin)
   }
 
   cadastrar(user: User
     ): Observable<User>{
-    return this.http.post<User>('http://localhost:8080/usuarios/signin', user)
+    return this.http.post<User>(`${environment.uri}/usuarios/signin`, user)
   }
 
   logado()

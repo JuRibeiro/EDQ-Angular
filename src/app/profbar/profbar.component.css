@@ -1,0 +1,6 @@
+.img-bg{
+    background-image: url(../../assets/img/prof.svg);
+    background-repeat: no-repeat;
+    background-size: 30em;
+    -webkit-background-composite: local;
+}

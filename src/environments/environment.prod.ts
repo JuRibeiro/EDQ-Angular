@@ -5,5 +5,7 @@ export const environment = {
   id: 0,
   foto: '',
   tipoUsuario: '',
-  email: ''
+  email: '',
+  uri: 'https://edq-ensino.herokuapp.com'
 };
+//http://localhost:8080

@@ -8,4 +8,4 @@ export const environment = {
   email: '',
   uri: 'https://edq-ensino.herokuapp.com'
 };
-//http://localhost:8080
+//http://localhost:8080'

@@ -12,3 +12,9 @@ html{
 .bg-laranja{
     background-color: #fe7f1d;
 }
+.tela-cheia{
+    height: 100vh;
+}
+.fs-principal{
+    font-size: 3em;
+}

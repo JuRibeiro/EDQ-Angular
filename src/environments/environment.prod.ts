@@ -9,3 +9,6 @@ export const environment = {
   uri: 'https://edq-ensino.herokuapp.com'
 };
 //http://localhost:8080'
+
+
+

@@ -16,6 +16,7 @@ export class TemaService {
   token={
     headers: new HttpHeaders().set('Authorization',environment.token)
   }
+
   refreshToken(){
     this.token={
       headers: new HttpHeaders().set('Authorization',environment.token)
@@ -27,8 +28,8 @@ export class TemaService {
   }
 
   getAllTema():Observable<Tema[]>{
-    return this.http.get<Tema[]>(
-      'http://localhost:8080/temas',this.token
+    return this.http.get<Tema[]>(`${environment.uri}/temas`,this.token
+
     )
   }
 
@@ -39,8 +40,8 @@ export class TemaService {
   }
 
   putTema(tema:Tema):Observable<Tema>{
-    return this.http.put<Tema>(
-      'http://localhost:8080/temas',tema,this.token
+    return this.http.put<Tema>(`${environment.uri}/temas`,tema,this.token
+
     )
   }
 

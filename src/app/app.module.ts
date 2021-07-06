@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { PlataformaComponent } from './plataforma/plataforma.component';
 import { MateriasComponent } from './materias/materias.component';
+import { MateriaDeleteComponent } from './delete/materia-delete/materia-delete.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { MateriasComponent } from './materias/materias.component';
     ContactComponent,
     NavbarLoggedinComponent,
     PlataformaComponent,
-    MateriasComponent
+    MateriasComponent,
+    MateriaDeleteComponent
   ],
   imports: [
     BrowserModule,

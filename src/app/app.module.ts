@@ -19,7 +19,11 @@ import { NavbarLoggedinComponent } from './navbar-loggedin/navbar-loggedin.compo
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { PlataformaComponent } from './plataforma/plataforma.component';
+import { CarouselComponent } from './carousel/carousel.component';
 import { MateriasComponent } from './materias/materias.component';
+import { MateriaEditComponent } from './edit/materia-edit/materia-edit.component';
+import { MateriaDeleteComponent } from './delete/materia-delete/materia-delete.component';
+
 
 
 @NgModule({
@@ -37,7 +41,11 @@ import { MateriasComponent } from './materias/materias.component';
     ContactComponent,
     NavbarLoggedinComponent,
     PlataformaComponent,
-    MateriasComponent
+    CarouselComponent,
+    MateriasComponent,
+    MateriaEditComponent,
+    MateriaDeleteComponent
+
   ],
   imports: [
     BrowserModule,

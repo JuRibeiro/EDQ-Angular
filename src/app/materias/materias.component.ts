@@ -23,8 +23,8 @@ export class MateriasComponent implements OnInit {
   ngOnInit(){
     if (environment.token == '')
     {
-      //alert('Sua sessão expirou. Faça login novamente')
-      this.router.navigate(['/entrar'])
+      alert('Sua sessão expirou. Faça login novamente.')
+      this.router.navigate(['/login'])
     }
 
     this.findAllTemas()

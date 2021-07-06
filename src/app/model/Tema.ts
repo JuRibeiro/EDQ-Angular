@@ -6,5 +6,4 @@ export class Tema{
     public anoConteudo: string
     public descricao: string
     public postagem: Postagem[]
-
 }

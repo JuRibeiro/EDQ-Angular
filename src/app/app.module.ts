@@ -19,6 +19,7 @@ import { NavbarLoggedinComponent } from './navbar-loggedin/navbar-loggedin.compo
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { PlataformaComponent } from './plataforma/plataforma.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { PlataformaComponent } from './plataforma/plataforma.component';
     ProfileComponent,
     ContactComponent,
     NavbarLoggedinComponent,
-    PlataformaComponent
+    PlataformaComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

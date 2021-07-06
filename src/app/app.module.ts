@@ -21,6 +21,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { PlataformaComponent } from './plataforma/plataforma.component';
 import { MateriasComponent } from './materias/materias.component';
 import { MateriaEditComponent } from './edit/materia-edit/materia-edit.component';
+import { MateriaDeleteComponent } from './delete/materia-delete/materia-delete.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { MateriaEditComponent } from './edit/materia-edit/materia-edit.component
     NavbarLoggedinComponent,
     PlataformaComponent,
     MateriasComponent,
-    MateriaEditComponent
+    MateriaEditComponent,
+    MateriaDeleteComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,19 @@
+.fonte-azul{
+    color: #53b6df;
+}
+.fonte-vermelho{
+    color: #ff4055;
+}
+.fonte-laranja{
+    color: #fe7f1d;
+}
+
+.sombra {
+-webkit-box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, 12px -5px 15px 5px #80C7FF, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, 12px -5px 15px 5px #80C7FF, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+/* .transicao {
+    color: #fe7f1d;
+      transition:0.5s;
+  } */

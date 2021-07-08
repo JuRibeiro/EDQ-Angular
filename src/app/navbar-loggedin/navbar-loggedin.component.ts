@@ -8,12 +8,27 @@ import { environment } from 'src/environments/environment.prod';
   styleUrls: ['./navbar-loggedin.component.css']
 })
 export class NavbarLoggedinComponent implements OnInit {
+  
+  nome = environment.nomeCompleto
+  foto = ''
+
+  semFoto() {
+    if(environment.foto == null){
+     this.foto = 'https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814049_960_720.png'
+    }
+    else if (environment.foto == environment.foto) {
+      this.foto = environment.foto
+    } 
+  }
 
   constructor(
     private router: Router
   ) { }
 
   ngOnInit() {
+    //console.log(this.foto)
+    this.semFoto()
+    //console.log(this.foto)
   }
 
   sair(){
@@ -23,7 +38,6 @@ export class NavbarLoggedinComponent implements OnInit {
     environment.email=''
     environment.foto=''
     environment.id=0
-
   }
 
 }

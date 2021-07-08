@@ -25,6 +25,7 @@ import { MateriaEditComponent } from './edit/materia-edit/materia-edit.component
 import { MateriaDeleteComponent } from './delete/materia-delete/materia-delete.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { PostagensComponent } from './postagens/postagens.component';
 
 
 
@@ -49,7 +50,8 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
     MateriaEditComponent,
     MateriaDeleteComponent,
     PostagemEditComponent,
-    PostagemDeleteComponent
+    PostagemDeleteComponent,
+    PostagensComponent
 
   ],
   imports: [

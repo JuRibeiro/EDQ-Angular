@@ -10,6 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { SigninComponent } from './signin/signin.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { PostagensComponent } from './postagens/postagens.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'homepage', pathMatch: 'full'},
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'materia-edit/:id', component: MateriaEditComponent},
   {path: 'materia-delete/:id', component:MateriaDeleteComponent},
   {path: 'postagem-edit/:id', component:PostagemEditComponent},
-  {path: 'postagem-delete/:id',component:PostagemDeleteComponent}
+  {path: 'postagem-delete/:id',component:PostagemDeleteComponent},
+  {path: 'postagens', component: PostagensComponent}
 ];
 
 @NgModule({

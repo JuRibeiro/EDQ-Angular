@@ -9,16 +9,15 @@
 /*     position: absolute;
     bottom: 10em;*/
     left: 15em;
-    bottom: 29em;
-    height: 70vh;
-    max-height: 600px;
+  /*   height: 40vh;
+    max-height: 300px; */
+    width: 30vw;
 }
 .fundo{
-    height: 80vh;
+    height: 60vh;
 }
 @media ( max-width:991px) {
     #profbar{
-        height: 50vh;
         left: 10em;
     }
 }

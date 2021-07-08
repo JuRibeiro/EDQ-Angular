@@ -15,7 +15,7 @@ export class ContactComponent implements OnInit {
   }
 
   enviar(){
-    /*this.router.navigate[(/)]*/
+    /*this.router.navigate[(/)] /*
 
 
   }

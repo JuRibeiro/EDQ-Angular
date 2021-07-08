@@ -40,9 +40,9 @@ entrar(){
     
     this.router.navigate(['/plataforma'])
   }, erro =>{
-    if(erro.status == 500){
+    if(erro.status == 401){
 
-      alert('Usuário ou senha estão incorretos!')
+      alert('Usuário e/ou senha incorreto(s)!')
     }
   })
 }

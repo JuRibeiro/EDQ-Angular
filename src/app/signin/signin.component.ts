@@ -29,7 +29,8 @@ export class SigninComponent implements OnInit {
 
   tipoUser(event:any)
   {
-    this.tipoUsuario = event.target.value
+    /* this.tipoUsuario = event.target.value */
+    this.tipoUsuario = 'aluno'
   }
 
   cadastrar()
@@ -44,7 +45,7 @@ export class SigninComponent implements OnInit {
     {
       this.auth.cadastrar(this.user).subscribe((resposta:User)=>{
         this.user=resposta
-
+        alert(`${this.user.nomeCompleto} cadastrado com sucesso`)
         this.router.navigate(['/login'])
       })
     }

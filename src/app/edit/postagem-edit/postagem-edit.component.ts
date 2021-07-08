@@ -73,7 +73,7 @@ export class PostagemEditComponent implements OnInit {
     {
       this.postagem = resposta
       alert('Postagem atualizada com sucesso!')
-      this.router.navigate(['/homepage'])
+      this.router.navigate(['/postagens'])
     })
   }
 

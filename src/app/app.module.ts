@@ -54,7 +54,7 @@ import { PostagensComponent } from './postagens/postagens.component';
     MateriaEditComponent,
     MateriaDeleteComponent,
 
-    CardsComponent
+    CardsComponent,
 
     PostagemEditComponent,
     PostagemDeleteComponent,

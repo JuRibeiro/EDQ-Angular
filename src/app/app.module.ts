@@ -23,6 +23,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { MateriasComponent } from './materias/materias.component';
 import { MateriaEditComponent } from './edit/materia-edit/materia-edit.component';
 import { MateriaDeleteComponent } from './delete/materia-delete/materia-delete.component';
+import { CardsComponent } from './cards/cards.component';
 
 
 
@@ -45,7 +46,8 @@ import { MateriaDeleteComponent } from './delete/materia-delete/materia-delete.c
     CarouselComponent,
     MateriasComponent,
     MateriaEditComponent,
-    MateriaDeleteComponent
+    MateriaDeleteComponent,
+    CardsComponent
 
   ],
   imports: [

@@ -27,7 +27,6 @@ import { CardsComponent } from './cards/cards.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { PostagensComponent } from './postagens/postagens.component';
-import { PlaylistComponent } from './playlist/playlist.component';
 import { VideopageComponent } from './videopage/videopage.component';
 
 
@@ -55,7 +54,6 @@ import { VideopageComponent } from './videopage/videopage.component';
     PostagemEditComponent,
     PostagemDeleteComponent,
     PostagensComponent,
-    PlaylistComponent,
     VideopageComponent
 
   ],

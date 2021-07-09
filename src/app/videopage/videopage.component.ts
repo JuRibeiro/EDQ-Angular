@@ -32,6 +32,8 @@ export class VideopageComponent implements OnInit {
 
   ngOnInit() {
 
+    window.scroll(0,0)
+    
     this.idMateria = this.route.snapshot.params['id']
 
     /* Playlist */

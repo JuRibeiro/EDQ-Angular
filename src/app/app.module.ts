@@ -1,8 +1,8 @@
 import { HttpClientModule } from '@angular/common/http'
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
@@ -23,15 +23,12 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { MateriasComponent } from './materias/materias.component';
 import { MateriaEditComponent } from './edit/materia-edit/materia-edit.component';
 import { MateriaDeleteComponent } from './delete/materia-delete/materia-delete.component';
-
 import { CardsComponent } from './cards/cards.component';
-
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { PostagensComponent } from './postagens/postagens.component';
+import { PlaylistComponent } from './playlist/playlist.component';
 import { VideopageComponent } from './videopage/videopage.component';
-
-
 
 
 @NgModule({
@@ -54,14 +51,12 @@ import { VideopageComponent } from './videopage/videopage.component';
     MateriasComponent,
     MateriaEditComponent,
     MateriaDeleteComponent,
-
     CardsComponent,
-
     PostagemEditComponent,
     PostagemDeleteComponent,
     PostagensComponent,
+    PlaylistComponent,
     VideopageComponent
-
 
   ],
   imports: [

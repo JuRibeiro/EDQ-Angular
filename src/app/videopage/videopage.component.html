@@ -1,0 +1,34 @@
+<div class="container-fluid">
+
+
+    <div class="row">
+
+        <div class="col-md-8">
+            <h1 class="mb-3 mt-5 text-center">{{titulo}}</h1>
+
+            <div class="ratio ratio-16x9">
+                <iframe [src]="urlSafe"></iframe>
+            </div>
+
+            <div>
+                <h5>Descrição do vídeo</h5>
+                <p>{{descricao}}</p>
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+                <h5 class="text-center">
+                    {{tema.materia}}
+                </h5>
+              <div class="list-group" *ngFor="let videos of tema.postagem">
+                <a class="list-group-item list-group-item-action "
+                  aria-current="true"
+                  (click)='trocarAula(videos.link_video, videos.titulo, videos.descricao)'>
+                  {{ videos.titulo }}
+                </a>
+              </div>
+
+        </div>
+    </div>
+</div>

@@ -1,21 +1,77 @@
-<div class="introduction">
-    <p class="site-title text-center">
-      EDQ Teste - Materias Cards (Caso queira titulo assim, acho que não usaremos)</p><br></div>
+<div class="introduction mt-4">
+  <h2 class="text-center">1º Ano</h2><br>
+</div>
 
 <div class="container">
-<div class="row">
+
+  <div class="row">
 
     <!-- .card -->
-  <article class="col-md-4 col-lg-3">
+    <article class="col-md-4 col-lg-3">
       <!-- .card-content -->
-    <div class="card-content">
-      <a class="spectrum-a" routerLink='/'> <img class="spectrum1" src="https://image.freepik.com/free-vector/science-elements-with-test-tubes-and-molecules_23-2147491185.jpg" alt="meow">
-      <h4 class="spectrum-h2"><!-- {{titulo}} --></h4>
-        <p><!-- {{descricao}} --></p></a>   
-    </div>
-    <!-- .card-content -->
-  </article>
-  <!-- .card -->
+      <div class="card-content " *ngFor="let item of listaTemas1">
+        <a class="spectrum-a" [routerLink]="['/videopage', item.id]"> <img class="spectrum1"
+            src="https://image.freepik.com/free-vector/science-elements-with-test-tubes-and-molecules_23-2147491185.jpg"
+            alt="meow">
+          <h4 class="spectrum-h2">{{item.materia}}</h4>
+          <p>{{item.descricao}}</p>
+        </a>
+      </div>
+      <!-- .card-content -->
+    </article>
+    <!-- .card -->
 
+  </div>
 </div>
+
+<div class="introduction mt-4">
+  <h2 class="text-center">2º Ano</h2><br>
+</div>
+
+<div class="container">
+
+  <div class="row">
+
+    <!-- .card -->
+    <article class="col-md-4 col-lg-3">
+      <!-- .card-content -->
+      <div class="card-content " *ngFor="let item of listaTemas2">
+        <a class="spectrum-a" [routerLink]="['/videopage', item.id]"> <img class="spectrum1"
+            src="https://image.freepik.com/free-vector/science-elements-with-test-tubes-and-molecules_23-2147491185.jpg"
+            alt="meow">
+          <h4 class="spectrum-h2">{{item.materia}}</h4>
+          <p>{{item.descricao}}</p>
+        </a>
+      </div>
+      <!-- .card-content -->
+    </article>
+    <!-- .card -->
+
+  </div>
+</div>
+
+<div class="introduction mt-4">
+  <h2 class="text-center">3º Ano</h2><br>
+</div>
+
+<div class="container">
+
+  <div class="row d-flex">
+
+    <!-- .card -->
+    <article class="col-md-4 col-lg-3">
+      <!-- .card-content -->
+      <div class="card-content " *ngFor="let item of listaTemas3">
+        <a class="spectrum-a" [routerLink]="['/videopage', item.id]"> <img class="spectrum1"
+            src="https://image.freepik.com/free-vector/science-elements-with-test-tubes-and-molecules_23-2147491185.jpg"
+            alt="meow">
+          <h4 class="spectrum-h2">{{item.materia}}</h4>
+          <p>{{item.descricao}}</p>
+        </a>
+      </div>
+      <!-- .card-content -->
+    </article>
+    <!-- .card -->
+
+  </div>
 </div>

@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-8">
+        <h5 class="text-center">
+            {{tema.materia}}
+        </h5>
+      <div class="list-group" *ngFor="let videos of tema.postagem">
+        <a
+          class="list-group-item list-group-item-action "
+          aria-current="true"
+          (click)='trocarAula(videos.id)'
+        >
+          {{ videos.titulo }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

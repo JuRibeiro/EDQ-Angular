@@ -30,7 +30,7 @@ export class SigninComponent implements OnInit {
   tipoUser(event:any)
   {
     /* this.tipoUsuario = event.target.value */
-    this.tipoUsuario = 'aluno'
+    this.tipoUsuario = 'adm'
   }
 
   cadastrar()

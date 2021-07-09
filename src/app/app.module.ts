@@ -29,6 +29,7 @@ import { CardsComponent } from './cards/cards.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { PostagensComponent } from './postagens/postagens.component';
+import { PlaylistComponent } from './playlist/playlist.component';
 
 
 
@@ -53,12 +54,11 @@ import { PostagensComponent } from './postagens/postagens.component';
     MateriasComponent,
     MateriaEditComponent,
     MateriaDeleteComponent,
-
     CardsComponent,
-
     PostagemEditComponent,
     PostagemDeleteComponent,
-    PostagensComponent
+    PostagensComponent,
+    PlaylistComponent
 
 
   ],

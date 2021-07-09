@@ -25,6 +25,10 @@ export class MateriaDeleteComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
 
+    if(environment.tipoUsuario != 'adm'){
+      alert('Você não tem permissão para acessar essa página')
+      this.router.navigate(['/plataforma'])
+    }
     this.idTema = this.route.snapshot.params['id']
     this.findByIdTema(this.idTema)
 

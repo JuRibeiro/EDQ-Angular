@@ -35,6 +35,10 @@ export class PostagemEditComponent implements OnInit {
       this.router.navigate(['/login'])
     }
 
+    if(environment.tipoUsuario != 'adm'){
+      alert('Você não tem permissão para acessar essa página')
+      this.router.navigate(['/plataforma'])
+    }
     let id = this.route.snapshot.params['id']
     this.findByIdPostagem(id)
     this.findAllTemas()

@@ -26,7 +26,7 @@ const routes: Routes = [
   {path: 'postagem-edit/:id', component:PostagemEditComponent},
   {path: 'postagem-delete/:id',component:PostagemDeleteComponent},
   {path: 'postagens', component: PostagensComponent},
-  {path: 'videopage', component: VideopageComponent}
+  {path: 'videopage/:id', component: VideopageComponent}
 ];
 
 @NgModule({

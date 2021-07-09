@@ -29,6 +29,7 @@ import { CardsComponent } from './cards/cards.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { PostagensComponent } from './postagens/postagens.component';
+import { VideopageComponent } from './videopage/videopage.component';
 
 
 
@@ -58,7 +59,8 @@ import { PostagensComponent } from './postagens/postagens.component';
 
     PostagemEditComponent,
     PostagemDeleteComponent,
-    PostagensComponent
+    PostagensComponent,
+    VideopageComponent
 
 
   ],

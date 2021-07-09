@@ -9,7 +9,7 @@ import { UserLogin } from '../model/UserLogin';
   providedIn: 'root'
 })
 export class AuthService {
-
+ 
   constructor(
     private http: HttpClient
   ) { }
@@ -28,6 +28,16 @@ export class AuthService {
     let ok: boolean = false
 
     if(environment.token != ''){
+      ok = true
+    }
+
+    return ok 
+  }
+
+  adm(){
+    let ok: boolean = false
+
+    if(environment.tipoUsuario == 'adm'){
       ok = true
     }
 

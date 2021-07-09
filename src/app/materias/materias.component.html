@@ -63,8 +63,8 @@
                     <td>{{tema.descricao}}</td>
                     <td>{{tema.anoConteudo}}</td>
                     <td>
-                      <button class="btn btn-info m-3">Editar</button>
-                      <button class="btn btn-danger">Apagar</button>
+                      <button class="btn btn-info m-3" [routerLink]="['/materia-edit', tema.id]">Editar</button>
+                      <button class="btn btn-danger" [routerLink]="['/materia-delete', tema.id]">Apagar</button>
                     </td>
                   </tr>
                 </tbody>

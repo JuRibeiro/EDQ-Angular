@@ -27,6 +27,10 @@ export class MateriasComponent implements OnInit {
       this.router.navigate(['/login'])
     }
 
+    if(environment.tipoUsuario != 'adm'){
+      alert('Você não tem permissão para acessar essa página')
+      this.router.navigate(['/plataforma'])
+    }
     this.findAllTemas()
   }
 

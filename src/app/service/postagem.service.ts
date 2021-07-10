@@ -21,7 +21,11 @@ export class PostagemService {
   refreshToken(){
     this.token={
       headers: new HttpHeaders().set('Authorization',environment.token)
-    }
+    }   
+  }
+
+  getByIdUser(id:number):Observable<User>{
+    return this.http.get<User>(`${environment.uri}/usuarios/${id}`, this.token)
   }
 
   getAllPostagem():Observable<Postagem[]>{
@@ -30,10 +34,6 @@ export class PostagemService {
 
   getByIdPostagem(id:number):Observable<Postagem>{
     return this.http.get<Postagem>(`${environment.uri}/postagens/${id}`, this.token)
-  }
-
-  getByIdUser(id:number):Observable<User>{
-    return this.http.get<User>(`${environment.uri}/usuarios/${id}`, this.token)
   }
 
   postPostagem(postagem:Postagem):Observable<Postagem>{

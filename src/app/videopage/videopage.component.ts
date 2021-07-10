@@ -1,8 +1,10 @@
 
 import { Component, Input, OnInit, Sanitizer } from '@angular/core';
 import {DomSanitizer,SafeResourceUrl,} from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Tema } from '../model/Tema';
+import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
 
 @Component({
@@ -26,11 +28,22 @@ export class VideopageComponent implements OnInit {
   constructor(
     public sanitizer: DomSanitizer,
     private temaService: TemaService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router,
+    private postagemService: PostagemService
   
     ) { }
 
   ngOnInit() {
+
+    if (environment.token == '')
+    {
+      alert('Sua sessão expirou. Faça login novamente')
+      this.router.navigate(['/login'])
+    }
+
+    this.temaService.refreshToken()
+    this.postagemService.refreshToken()
 
     window.scroll(0,0)
     

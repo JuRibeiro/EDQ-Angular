@@ -28,6 +28,7 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { PostagensComponent } from './postagens/postagens.component';
 import { VideopageComponent } from './videopage/videopage.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { VideopageComponent } from './videopage/videopage.component';
     PostagemEditComponent,
     PostagemDeleteComponent,
     PostagensComponent,
-    VideopageComponent
+    VideopageComponent,
+    UserEditComponent,
 
   ],
   imports: [

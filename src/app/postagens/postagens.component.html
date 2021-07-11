@@ -14,7 +14,7 @@
                         <tr>
                             <th scope="col">Título</th>
                             <th scope="col">Tema</th>
-                            <th scope="col">Descrição</th>
+                            <th scope="col">Ano Conteúdo</th>
                             <th scope="col">Autor</th>
                             <th scope="col">Data e hora</th>
                             <th scope="col">Link do vídeo</th>
@@ -25,7 +25,7 @@
                         <tr *ngFor='let postagem of listaPostagens'>
                             <td>{{postagem.titulo}}</td>
                             <td>{{postagem.tema.materia}}</td>
-                            <td>{{postagem.descricao}}</td>
+                            <td>{{postagem.tema.anoConteudo}}</td>
                             <td>{{postagem.usuario.nomeCompleto}}</td>
                             <td>{{postagem.data_postagem | date: 'dd/MM/yyyy'}} às {{postagem.data_postagem | date:
                                 'HH:mm'}}</td>

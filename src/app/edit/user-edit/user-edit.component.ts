@@ -41,23 +41,33 @@ export class UserEditComponent implements OnInit {
     }
 
   tipoUser(event: any) {
-      /* this.tipoUsuario = event.target.value */
-      /* this.tipoUsuario = 'aluno' */
+      this.tipoUsuario = event.target.value
     }
   
   atualizar(){
-    /* this.user.tipoUsuario= this.tipoUsuario
- */
-    if(this.user.senha != this.confirmarSenha){
+    this.user.tipoUsuario= this.tipoUsuario
+
+    if(this.user.senha != this.confirmarSenha) 
+     {
       alert('As senhas estão divergentes!')
-    } else {
+    }
+    else
+    {
       this.authService.cadastrar(this.user).subscribe((resp:User)=>{
         this.user=resp
-        /* this.router.navigate(['/plataforma']) */
-        alert(`${this.user.nomeCompleto} Atualizado com sucesso!`)        
+        this.router.navigate(['/plataforma'])
+        alert(`${this.user.nomeCompleto} Atualizado com sucesso! Faça o login novamente.`)
+        environment.token = ''
+        environment.nomeCompleto = ''
+        environment.email = ''
+        environment.foto = ''
+        environment.id = 0
+
+        this.router.navigate(['/login'])     
       })
-    }
   }
+
+}
 
   findByIdUser(id: number) {
     this.authService.getByIdUser(id).subscribe((resp: User) => {

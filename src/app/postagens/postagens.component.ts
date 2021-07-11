@@ -14,6 +14,7 @@ export class PostagensComponent implements OnInit {
 
   tema: Postagem = new Postagem()
   listaPostagens: Postagem[]
+  tituloPost: string
 
   constructor(
     private router: Router,
@@ -39,6 +40,22 @@ export class PostagensComponent implements OnInit {
     this.PostagemService.getAllPostagem().subscribe((resp: Postagem[])=> {
       this.listaPostagens = resp
     })
+  }
+
+  findByTituloPostagem()
+  {
+    if (this.tituloPost=='')
+    {
+      this.findAllPostagens()
+    }
+    else
+    {
+      this.PostagemService.getByTituloPostagem(this.tituloPost).subscribe((resposta: Postagem[])=>
+      {
+        this.listaPostagens = resposta
+      })
+    }
+
   }
 
 }

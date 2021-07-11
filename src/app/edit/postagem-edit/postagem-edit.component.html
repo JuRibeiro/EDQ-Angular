@@ -7,21 +7,26 @@
     </div>
     <div class="row d-flex justify-content-center">
         <div class="col-md-6">
-            <div class="form-group">
+            <div class="form-group mb-2">
                 <label for="titulo">Titulo da postagem</label>
                 <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo" placeholder="Informe o titulo">
             </div>
     
-            <div class="form-group">
+            <div class="form-group mb-2">
                 <label for="titulo">Descrição da postagem</label>
                 <textarea [(ngModel)]='postagem.descricao' class="form-control" name="texto" id="texto" rows="3"></textarea>
+            </div>
 
+            <div class="form-group mb-2">
                 <label for="titulo">Link da postagem</label>
-                <div class="form-group mb-3">
+                <div class="form-group mb-2">
                     <input [(ngModel)]='postagem.link_video' type="text" class="form-control"  placeholder="Link do conteúdo">
                 </div>
             </div>
-    
+
+            <div class="form-group mb-2">
+                <label for="titulo mb-2">Escolha uma matéria <a data-bs-dismiss="modal" routerLink='/tema'> </a> </label>
+
             <div class="form-group mb-3">
                 <label>Escolha o ano:</label>
                 <select name="" (change)='getTemaAno($event)' class="form-control mt-1" >
@@ -34,6 +39,7 @@
             <div class="form-group">
 
                 <label for="titulo">Escolha uma matéria <a data-bs-dismiss="modal" routerLink='/tema'> </a> </label>
+
                 <select class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()' name="tema" id="tema">
                     <option *ngFor='let item of listaTemas' value="{{item.id}}">
                         {{item.materia}}

@@ -31,6 +31,11 @@ export class TemaService {
     return this.http.get<Tema[]>(`${environment.uri}/temas`,this.token)
   }
 
+  getByNomeTema(materia: string):Observable<Tema[]>
+  {
+    return this.http.get<Tema[]>(`${environment.uri}/temas/materia/${materia}`, this.token)
+  }
+
   postTema(tema:Tema):Observable<Tema>{
     return this.http.post<Tema>(`${environment.uri}/temas`,tema,this.token)
   }

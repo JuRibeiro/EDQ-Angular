@@ -14,6 +14,7 @@ export class MateriasComponent implements OnInit {
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
+  materiaPost: string
 
   constructor(
     private router: Router,
@@ -51,6 +52,22 @@ export class MateriasComponent implements OnInit {
       this.findAllTemas()
       this.tema = new Tema()
     })
+  }
+
+  finByTituloTema()
+  {
+    if(this.materiaPost=='')
+    {
+      this.findAllTemas()
+    }
+    else
+    {
+      this.temaService.getByNomeTema(this.materiaPost).subscribe((resposta: Tema[])=>
+    {
+      this.listaTemas=resposta
+
+    })
+    }
   }
 
 }

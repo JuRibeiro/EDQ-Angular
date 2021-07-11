@@ -6,14 +6,24 @@
         </div>
     </div>
 
+<!--Div Barra pesquisa (Juliana)-->
+    <div class="row d-flex justify-content-center mt-5 mb-5">
+        <div class="col-md-5">
+            <div class="form-group">
+                <input type="text" class="form-control" id="titulo" placeholder="Digite o titulo de uma postagem para realizar uma busca" [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()'>
+            </div>
+        </div>
+    </div>
+<!--/Div Barra pesquisa(Juliana)-->
+
     <div class="row mt-3 mb-5 d-flex justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="table-responsive">
                 <table class="table table-hover text-center align-middle">
                     <thead>
                         <tr>
                             <th scope="col">Título</th>
-                            <th scope="col">Tema</th>
+                            <th scope="col">Matéria</th>
                             <th scope="col">Ano Conteúdo</th>
                             <th scope="col">Autor</th>
                             <th scope="col">Data e hora</th>
@@ -40,5 +50,4 @@
             </div>
         </div>
     </div>
-
 </div>

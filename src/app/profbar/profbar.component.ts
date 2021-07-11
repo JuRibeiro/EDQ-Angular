@@ -50,7 +50,7 @@ export class ProfbarComponent implements OnInit {
     })
   }
 
-  cadastrar()
+  cadastrarMateria()
   {
     this.temaService.postTema(this.tema).subscribe((resposta: Tema)=>
     {

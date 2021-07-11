@@ -45,7 +45,7 @@ export class UserEditComponent implements OnInit {
     }
   
   atualizar(){
-    this.user.tipoUsuario= this.tipoUsuario
+    /* this.user.tipoUsuario= this.tipoUsuario */
 
     if(this.user.senha != this.confirmarSenha) 
      {
@@ -53,7 +53,7 @@ export class UserEditComponent implements OnInit {
     }
     else
     {
-      this.authService.cadastrar(this.user).subscribe((resp:User)=>{
+      this.authService.atualizar(this.user).subscribe((resp:User)=>{
         this.user=resp
         this.router.navigate(['/plataforma'])
         alert(`${this.user.nomeCompleto} Atualizado com sucesso! Faça o login novamente.`)

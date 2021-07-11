@@ -36,10 +36,9 @@ export class AuthService {
     return this.http.post<User>(`${environment.uri}/usuarios/signin`, user)
   }
 
-  /* atualizar(user: User): Observable<User>{
-    return this.http.post<User>(`${environment.uri}/usuarios/signin`, user)
-  } */
-
+  atualizar(user: User): Observable<User>{
+    return this.http.put<User>(`${environment.uri}/usuarios`, user, this.token)
+  }
 
   logado()
   {

@@ -81,7 +81,7 @@
                     <input [(ngModel)]='postagem.link_video' type="text" class="form-control"  placeholder="Link do conteúdo">
                     </div>
                     <div class="form-group mb-3">
-                      <select name="" (change)='getTemaAno($event)' class="form-control mt-1" >
+                      <select name="" (change)='getTemaAno($event)' class="form-select mt-1" >
                           <option value="">Escolha o ano</option>
                           <option  value="1º ano" >1º ano</option>
                           <option  value="2º ano" >2º ano</option>
@@ -89,7 +89,7 @@
                       </select>
                   </div>
                     <div class="form-group">
-                        <select name="" (change)='postTemaId($event)' class="form-control" id="" >
+                        <select name="" (change)='postTemaId($event)' class="form-select" id="" >
                             <option value="">Escolha uma matéria abaixo</option>
                             <option *ngFor='let items of listaTemas' value="{{items.id}}" >{{items.materia}}</option>
                         </select>

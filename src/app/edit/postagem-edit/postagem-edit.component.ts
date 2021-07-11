@@ -43,6 +43,12 @@ export class PostagemEditComponent implements OnInit {
     this.findByIdPostagem(id)
     this.findAllTemas()
   }
+  getTemaAno(event:any){
+    return this.temaService.getByAnoConteudo(event.target.value).subscribe((resp:Tema[])=>{
+      this.listaTemas = resp
+    })
+  }
+
 
   findByIdPostagem(id: number)
   {

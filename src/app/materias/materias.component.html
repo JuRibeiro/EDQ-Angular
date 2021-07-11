@@ -16,12 +16,18 @@
                         <input [(ngModel)]='tema.materia' type="text" class="form-control" id="descricao" placeholder="Matéria">
                     </div>
 
-                    <div class="form-group mb-3">
+                    <div class="form-group mb-1">
                       <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="descricao" placeholder="Descrição da matéria">
                     </div>
 
                     <div class="form-group mb-3">
-                    <input [(ngModel)]='tema.anoConteudo' type="text" class="form-control" id="descricao" placeholder="Ano conteúdo">
+                      <label>Escolha o ano:</label>
+                      <select name="" [(ngModel)]='tema.anoConteudo' class="form-control mt-1" id=""  >
+                        <option value="">Escolha o ano</option>
+                        <option  value="1º ano" >1º ano</option>
+                        <option  value="2º ano" >2º ano</option>
+                        <option  value="3º ano" >3º ano</option>
+                    </select>
                     </div>
 
                     <div class="d-flex justify-content-center">

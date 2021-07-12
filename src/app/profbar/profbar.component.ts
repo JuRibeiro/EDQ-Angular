@@ -50,7 +50,7 @@ export class ProfbarComponent implements OnInit {
     })
   } */
 
-  cadastrar()
+  cadastrarMateria()
   {
     this.temaService.postTema(this.tema).subscribe((resposta: Tema)=>
     {
@@ -65,7 +65,9 @@ export class ProfbarComponent implements OnInit {
     this.postagem.tema = this.tema
     this.user.id = environment.id
     this.postagem.usuario = this.user
-    console.table(this.postagem)
+    //copiar linha 70 em atualizar
+    this.postagem.link_video = this.postagem.link_video.replace("watch?v=", "embed/")
+   // console.table(this.postagem)
     this.postagemService.postPostagem(this.postagem).subscribe((resp:Postagem) =>{
       this.postagem=resp
       alert('Aula postada com sucesso!')

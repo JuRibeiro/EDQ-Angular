@@ -6,15 +6,25 @@
         </div>
     </div>
 
+<!--Div Barra pesquisa (Juliana)-->
+    <div class="row d-flex justify-content-center mt-5 mb-5">
+        <div class="col-md-5">
+            <div class="form-group">
+                <input type="text" class="form-control" id="titulo" placeholder="Digite o titulo de uma postagem para realizar uma busca" [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()'>
+            </div>
+        </div>
+    </div>
+<!--/Div Barra pesquisa(Juliana)-->
+
     <div class="row mt-3 mb-5 d-flex justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="table-responsive">
                 <table class="table table-hover text-center align-middle">
                     <thead>
                         <tr>
                             <th scope="col">Título</th>
-                            <th scope="col">Tema</th>
-                            <th scope="col">Descrição</th>
+                            <th scope="col">Matéria</th>
+                            <th scope="col">Ano Conteúdo</th>
                             <th scope="col">Autor</th>
                             <th scope="col">Data e hora</th>
                             <th scope="col">Link do vídeo</th>
@@ -25,7 +35,7 @@
                         <tr *ngFor='let postagem of listaPostagens'>
                             <td>{{postagem.titulo}}</td>
                             <td>{{postagem.tema.materia}}</td>
-                            <td>{{postagem.descricao}}</td>
+                            <td>{{postagem.tema.anoConteudo}}</td>
                             <td>{{postagem.usuario.nomeCompleto}}</td>
                             <td>{{postagem.data_postagem | date: 'dd/MM/yyyy'}} às {{postagem.data_postagem | date:
                                 'HH:mm'}}</td>
@@ -40,5 +50,4 @@
             </div>
         </div>
     </div>
-
 </div>

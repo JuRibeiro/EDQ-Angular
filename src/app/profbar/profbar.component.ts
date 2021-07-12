@@ -28,7 +28,7 @@ export class ProfbarComponent implements OnInit {
   ngOnInit() {
     this.temaService.refreshToken()
     this.postagemService.refreshToken()
-    this.findAllTemas()
+    /* this.findAllTemas() */
   }
 
   postTemaId(event:any){
@@ -42,13 +42,13 @@ export class ProfbarComponent implements OnInit {
     })
   }
 
-  findAllTemas()
+/*   findAllTemas()
   {
     this.temaService.getAllTema().subscribe((resposta: Tema[])=>
     {
       this.listaTemas=resposta
     })
-  }
+  } */
 
   cadastrarMateria()
   {
@@ -56,7 +56,6 @@ export class ProfbarComponent implements OnInit {
     {
       this.tema = resposta
       alert('Matéria cadastrada com sucesso!')
-      this.findAllTemas()
       this.tema = new Tema()
     })
   }

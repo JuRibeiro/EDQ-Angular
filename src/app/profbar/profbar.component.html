@@ -9,8 +9,8 @@
                     <h5>BEM VINDO PROFESSOR</h5>
                     <p>Deseja postar algo novo para os seus alunos?</p>
                     <div>
-                        <button data-bs-toggle="modal" data-bs-target="#addTema" class="btn btn-success me-3 mt-3">Cadastrar nova matéria</button>
-                        <button data-bs-toggle="modal" data-bs-target="#addPostagem" class="btn btn-primary mt-3">Adicionar nova aula</button>
+                        <button data-bs-toggle="modal" data-bs-target="#addTema" class="btn btn-secondary me-3 mt-3">Cadastrar nova matéria</button>
+                        <button data-bs-toggle="modal" data-bs-target="#addPostagem" class="btn btn-secondary mt-3">Adicionar nova aula</button>
                     </div>
                 </div>
             </div>
@@ -49,8 +49,10 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button (click)='limparCampos()' type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)='cadastrarMateria()'>Cadastrar matéria</button>
+         
+          <a (click)='limparCampos()' data-bs-dismiss="modal" class="text-decoration-none "> Fechar</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)='cadastrarMateria()'>Cadastrar matéria</button>
+
         </div>
       </div>
     </div>
@@ -97,8 +99,8 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button (click)='limparCampos()' type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)='cadastrarPostagem()'>Adicionar aula</button>
+          <a (click)='limparCampos()' data-bs-dismiss="modal" class="text-decoration-none "> Fechar</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)='cadastrarPostagem()'>Adicionar aula</button>
         </div>
       </div>
     </div>

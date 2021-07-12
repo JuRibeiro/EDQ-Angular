@@ -1,4 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top pb-0 pt-0" style="background-color: rgba(0, 119, 255, 0.849);">
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-navbar">
+    <!-- rgba(0, 119, 255, 0.849) -->
 
     <!-- BOTÃO SIDEBAR -->
     <div class="nav-item">
@@ -8,7 +10,7 @@
 
     <!-- LOGO -->
     <div>
-        <a class="navbar-brand m-3" routerLink='/plataforma'><img src="../../assets/img/logo1.png" width="60px" alt="Logo EDQ"></a>
+        <a class="navbar-brand m-3" routerLink='/plataforma'><img src="../../assets/img/EDQbrancoAjustado.png" height="38px" alt="Logo EDQ"></a>
     </div>          
 
     <!-- PESQUISA -->
@@ -68,9 +70,9 @@
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
 
         <!-- SIDEBAR HEADER-->
-        <div class="offcanvas-header bg-secondary text-white">
+        <div class="offcanvas-header bg-navbar text-white">
             <h6 class="offcanvas-title ms-2 text-center" id="offcanvasExampleLabel"><a class="navbar-brand"
-                    href="#home"><img src="../../assets/img/logo1.png" width="60px" alt="Logo EDQ"></a><br>A
+                    href="#home"><img src="../../assets/img/EDQbrancoAjustado.png" width="60px" alt="Logo EDQ"></a><br>A
                 plataforma
                 que iguala seu conhecimento</h6> <button type="button mb-5" class="btn-close btn-danger text-reset"
                 data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -102,16 +104,16 @@
             <div class="row">
 
                 <!-- FOTO USUÁRIO -->
-                <div class="col-md-2 p-2 d-flex align-items-center bg-info">
+                <div class="col-md-2 p-2 d-flex align-items-center bg-cinza">
                     <img src={{foto}} alt="Foto de perfil" width="50px" height="50px" class="rounded-circle border border-4">
                 </div>
 
                 <!-- NOME USUÁRIO -->
-                <div class="col-md-8 p-2 ps-0 bg-info d-flex align-items-center flex-shrink-1">
+                <div class="col-md-8 p-2 ps-0 bg-cinza d-flex align-items-center flex-shrink-1">
                     <p class="collapse navbar-collapse m-0 ps-3 font-weight-bold fs-16">{{nome}}</p>
                 </div>
 
-                <div class="col-md-2 p-2 bg-info d-flex align-items-center">
+                <div class="col-md-2 p-2 bg-cinza d-flex align-items-center">
                     <a (click)='sair()'>
                         <button type="submit" class="btn btn-outline-danger" data-bs-dismiss="offcanvas">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -128,7 +130,7 @@
         </div>
 
         <!-- SIDEBAR FOOTER -->
-        <div class="offcanvas-footer bg-secondary text-white text-center">
+        <div class="offcanvas-footer bg-navbar text-white text-center">
             <div class="col-md-12 mt-3 mb-2">
                 <a href="mailto:EDQ.contato@gmail.com?Subject=Mensagem%20de%20{{nome}}" class="me-2 text-reset" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"

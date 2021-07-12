@@ -1,6 +1,6 @@
 
 .bg-2{
-    background-color: aqua;
+    background-color: #e5e5e5;
     background-position: bottom;
     height: 40vh;
 }
@@ -25,4 +25,8 @@
     #profbar{
         display: none;
     }
+}
+
+.text-decoration-none:hover{
+    cursor: pointer;
 }

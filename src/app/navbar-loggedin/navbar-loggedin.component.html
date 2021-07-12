@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: rgba(0, 119, 255, 0.849);">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top pb-0 pt-0" style="background-color: rgba(0, 119, 255, 0.849);">
 
     <!-- BOTÃO SIDEBAR -->
     <div class="nav-item">
@@ -26,15 +26,24 @@
 
 
         <ul class="navbar-nav d-flex align-items-center">
+
+            <li class="nav-item mx-2 mb-0 mt-0 pt-0 pb-0 dropdown">
+                <a class="nav-link dropdown-toggle text-white" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src={{foto}} alt="Foto de perfil" width="45px" height="45px" class="rounded-circle border border-4">⠀{{nome}}
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                  <li><a class="dropdown-item text-center" [routerLink]="['/user-edit', id]">Editar Usuário</a></li>
+                </ul>
+              </li>
+
             <!-- FOTO USUÁRIO -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <img src={{foto}} alt="Foto de perfil" width="50px" height="50px" class="rounded-circle border border-4">
-            </li>
+            </li> -->
 
             <!-- NOME USUÁRIO -->
-            <li class="nav-item me-5">
+            <!-- <li class="nav-item me-5">
                 <p class="m-0 ps-3 font-weight-bold text-white fs-16">Olá, {{nome}}</p>
-            </li>
+            </li> -->
 
             <!-- BOTAO LOGOUT -->
             <li class="nav-item p-0">
@@ -91,6 +100,7 @@
 
         <div class="container-fluid">
             <div class="row">
+
                 <!-- FOTO USUÁRIO -->
                 <div class="col-md-2 p-2 d-flex align-items-center bg-info">
                     <img src={{foto}} alt="Foto de perfil" width="50px" height="50px" class="rounded-circle border border-4">
@@ -103,7 +113,7 @@
 
                 <div class="col-md-2 p-2 bg-info d-flex align-items-center">
                     <a (click)='sair()'>
-                        <button type="submit" class="btn btn-outline-danger">
+                        <button type="submit" class="btn btn-outline-danger" data-bs-dismiss="offcanvas">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-box-arrow-right ms-1" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -120,17 +130,13 @@
         <!-- SIDEBAR FOOTER -->
         <div class="offcanvas-footer bg-secondary text-white text-center">
             <div class="col-md-12 mt-3 mb-2">
-                <!-- <h6 class="text-uppercase mb-2">Contato</h6> -->
-                <!-- <p>EDQ.contato@gmail.com</p> -->
-
-                <a href="https://github.com/JuRibeiro/EDQ-Angular" class="me-2 text-reset" target="_blank">
+                <a href="mailto:EDQ.contato@gmail.com?Subject=Mensagem%20de%20{{nome}}" class="me-2 text-reset" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-envelope-fill" viewBox="0 0 16 16">
                         <path
                             d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
                     </svg>
                 </a>
-
                 <a href="https://github.com/JuRibeiro/EDQ-Angular" class="ms-2 text-reset" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-github" viewBox="0 0 16 16">

@@ -11,6 +11,8 @@ import { SigninComponent } from './signin/signin.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { PostagensComponent } from './postagens/postagens.component';
+import { VideopageComponent } from './videopage/videopage.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'homepage', pathMatch: 'full'},
@@ -24,7 +26,9 @@ const routes: Routes = [
   {path: 'materia-delete/:id', component:MateriaDeleteComponent},
   {path: 'postagem-edit/:id', component:PostagemEditComponent},
   {path: 'postagem-delete/:id',component:PostagemDeleteComponent},
-  {path: 'postagens', component: PostagensComponent}
+  {path: 'postagens', component: PostagensComponent},
+  {path: 'videopage/:id', component: VideopageComponent},
+  {path: 'user-edit/:id', component: UserEditComponent}
 ];
 
 @NgModule({

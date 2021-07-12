@@ -12,6 +12,7 @@ export class NavbarLoggedinComponent implements OnInit {
   
   nome = environment.nomeCompleto
   foto = ''
+  id = environment.id
 
   semFoto() {
     if(environment.foto == null){

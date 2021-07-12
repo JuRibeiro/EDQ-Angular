@@ -28,23 +28,28 @@ export class TemaService {
   }
 
   getAllTema():Observable<Tema[]>{
-    return this.http.get<Tema[]>(`${environment.uri}/temas`,this.token
+    return this.http.get<Tema[]>(`${environment.uri}/temas`,this.token)
+  }
 
-    )
+  getByNomeTema(materia: string):Observable<Tema[]>
+  {
+    return this.http.get<Tema[]>(`${environment.uri}/temas/materia/${materia}`, this.token)
   }
 
   postTema(tema:Tema):Observable<Tema>{
-    return this.http.post<Tema>(`${environment.uri}/temas`,tema,this.token
-    )
+    return this.http.post<Tema>(`${environment.uri}/temas`,tema,this.token)
   }
 
   putTema(tema:Tema):Observable<Tema>{
-    return this.http.put<Tema>(`${environment.uri}/temas`,tema,this.token
-
-    )
+    return this.http.put<Tema>(`${environment.uri}/temas`,tema,this.token)
   }
 
   deleteTema(id:number){
     return this.http.delete(`${environment.uri}/temas/${id}`,this.token)
   }
+
+  getByAnoConteudo(ano: string): Observable<Tema[]>{
+    return this.http.get<Tema[]>(`${environment.uri}/temas/ano/${ano}`,this.token)
+  }
+
 }

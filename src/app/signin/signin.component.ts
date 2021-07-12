@@ -20,6 +20,7 @@ export class SigninComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.tipoUsuario = 'aluno'
   }
 
   confirmeSenha(event:any)
@@ -30,7 +31,8 @@ export class SigninComponent implements OnInit {
   tipoUser(event:any)
   {
     /* this.tipoUsuario = event.target.value */
-    this.tipoUsuario = 'aluno'
+
+    this.tipoUsuario = 'adm'
   }
 
   cadastrar()

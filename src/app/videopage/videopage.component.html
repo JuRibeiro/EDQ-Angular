@@ -1,0 +1,52 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-8">
+            <h2 class="mb-3 mt-5">Aula: {{titulo}}</h2>
+        </div>
+
+        <div class="row ">
+
+            <div class="col-md-8">
+                <div class="ratio ratio-16x9">
+                    <iframe [src]="urlSafe"></iframe>
+                </div>
+                <br>
+                <div>
+                    <h5>Descrição:</h5>
+                    <p>{{descricao}}</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <nav class="navbar navbar-light px-3 text-white" style="background-color: rgba(0, 119, 255, 0.849);">
+                    <ul class="nav nav-pills d-flex align-items-center">
+                        <li class="nav-item">
+                            <p class="m-0 font-weight-bold fs-16">Matéria: {{tema.materia}}</p>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-pills d-flex align-items-center">
+                        <li class="nav-item bg-secondary">
+                            <p class="m-0 p-1 font-weight-bold fs-16">{{tema.anoConteudo}}</p>
+                        </li>
+                    </ul>
+
+
+                </nav>
+
+            <div class="list-group" *ngFor="let videos of tema.postagem">
+                <a class="list-group-item list-group-item" aria-current="true"
+                    (click)='trocarAula(videos.link_video, videos.titulo, videos.descricao)'><svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-play-circle me-2" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path
+                            d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
+                    </svg>⠀{{videos.titulo}}
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</div>

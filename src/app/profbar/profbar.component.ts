@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
@@ -17,9 +18,11 @@ export class ProfbarComponent implements OnInit {
   user: User = new User()
   listaTemas: Tema[]
   idTema: number
+
   constructor( 
     private temaService: TemaService,
-    private postagemService: PostagemService
+    private postagemService: PostagemService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -33,7 +36,12 @@ export class ProfbarComponent implements OnInit {
     /* console.log(this.idTema) */
   }
 
-  
+  getTemaAno(event:any){
+    return this.temaService.getByAnoConteudo(event.target.value).subscribe((resp:Tema[])=>{
+      this.listaTemas = resp
+    })
+  }
+
   findAllTemas()
   {
     this.temaService.getAllTema().subscribe((resposta: Tema[])=>
@@ -42,7 +50,7 @@ export class ProfbarComponent implements OnInit {
     })
   }
 
-  cadastrar()
+  cadastrarMateria()
   {
     this.temaService.postTema(this.tema).subscribe((resposta: Tema)=>
     {

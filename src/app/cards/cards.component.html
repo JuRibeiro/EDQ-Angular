@@ -1,77 +1,58 @@
-<div class="introduction mt-4">
+<div class="introduction1 d-flex justify-content-center mt-4">
   <h2 class="text-center">1º Ano</h2><br>
 </div>
 
-<div class="container d-flex justify-contenter-cente">
+<!-- teste -->
 
-  <div class="row">
+<div class="row d-flex justify-content-center">
+  <div class="col-md-3 d-flex justify-content-center" *ngFor="let item of listaTemas1">
 
-    <!-- .card -->
-    <article class="col-md-4 col-lg-3" *ngFor="let item of listaTemas1">
-      <!-- .card-content -->
-      <div class="card-content">
-        <a class="spectrum-a" [routerLink]="['/videopage', item.id]"> <img class="spectrum1"
-            src="../../assets/img/Cards/Teaching-amico.png"
-            alt="meow">
-          <h4 class="spectrum-h2">{{item.materia}}</h4>
-          <p>{{item.descricao}}</p>
-        </a>
+    <div class="card mt-4" style="width: 100vh">
+      <a [routerLink]="['/videopage', item.id]">
+      <div class="card-header bg-color text-white text-center">{{item.materia}}</div>
+      <div class="card-body text-center bg-fundo">
+        <p class="card-title">{{item.descricao}}</p>
       </div>
-      <!-- .card-content -->
-    </article>
-    <!-- .card -->
-
-  </div>
+    </a>
+</div>
 </div>
 
-<div class="introduction mt-4">
+<!-- teste -->
+
+<div class="introduction2 d-flex justify-content-center mt-4">
   <h2 class="text-center">2º Ano</h2><br>
 </div>
 
-<div class="container">
+<div class="row d-flex justify-content-center">
+  <div class="col-md-3 d-flex justify-content-center" *ngFor="let item of listaTemas2">
 
-  <div class="row">
-
-    <!-- .card -->
-    <article class="col-md-4 col-lg-3" *ngFor="let item of listaTemas2">
-      <!-- .card-content -->
-      <div class="card-content " >
-        <a class="spectrum-a" [routerLink]="['/videopage', item.id]"> <img class="spectrum1"
-            src="../../assets/img/Cards/Online learning-rafiki.png"
-            alt="meow">
-          <h4 class="spectrum-h2">{{item.materia}}</h4>
-          <p>{{item.descricao}}</p>
-        </a>
+    <div class="card mt-4" style="width: 100vh">
+      <a [routerLink]="['/videopage', item.id]">
+      <div class="card-header bg-color2 text-white text-center">{{item.materia}}</div>
+      <div class="card-body text-center bg-fundo">
+        <p class="card-title">{{item.descricao}}</p>
       </div>
-      <!-- .card-content -->
-    </article>
-    <!-- .card -->
+    </a>
+</div>
+</div>
+
 
   </div>
 </div>
 
-<div class="introduction mt-4">
+<div class="introduction3 d-flex justify-content-center mt-4">
   <h2 class="text-center">3º Ano</h2><br>
 </div>
 
-<div class="container">
+<div class="row d-flex justify-content-center">
+  <div class="col-md-3 d-flex justify-content-center" *ngFor="let item of listaTemas3">
 
-  <div class="row d-flex">
-
-    <!-- .card -->
-    <article class="col-md-4 col-lg-3" *ngFor="let item of listaTemas3">
-      <!-- .card-content -->
-      <div class="card-content ">
-        <a class="spectrum-a" [routerLink]="['/videopage', item.id]"> <img class="spectrum1"
-            src="../../assets/img/Cards/Online learning-amico.png"
-            alt="meow">
-          <h4 class="spectrum-h2">{{item.materia}}</h4>
-          <p>{{item.descricao}}</p>
-        </a>
+    <div class="card mt-4 mb-5" style="width: 100vh">
+      <a [routerLink]="['/videopage', item.id]">
+      <div class="card-header bg-color3 text-white text-center">{{item.materia}}</div>
+      <div class="card-body text-center bg-fundo">
+        <p class="card-title">{{item.descricao}}</p>
       </div>
-      <!-- .card-content -->
-    </article>
-    <!-- .card -->
-
-  </div>
+    </a>
+</div>
 </div>

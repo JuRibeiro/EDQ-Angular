@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 html{
     scroll-behavior: smooth;
+}
+
+.fonte-geral{
+    font-family: 'Poppins', sans-serif;
 }
 
 .bg-azul{
@@ -17,4 +23,8 @@ html{
 }
 .fs-principal{
     font-size: 3em;
+}
+
+.fonte-geral{
+    font-family: 'Poppins', sans-serif;
 }

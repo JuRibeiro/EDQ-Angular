@@ -1,13 +1,13 @@
+<div class="container">
+
 <div class="introduction1 d-flex justify-content-center mt-4">
   <h2 class="text-center">1º Ano</h2><br>
 </div>
 
-<!-- teste -->
-
 <div class="row d-flex justify-content-center">
   <div class="col-md-3 d-flex justify-content-center" *ngFor="let item of listaTemas1">
 
-    <div class="card mt-4" style="width: 100vh">
+    <div class="card mt-4" style="width: 95vh">
       <a [routerLink]="['/videopage', item.id]">
       <div class="card-header bg-color text-white text-center">{{item.materia}}</div>
       <div class="card-body text-center bg-fundo">
@@ -17,8 +17,6 @@
 </div>
 </div>
 
-<!-- teste -->
-
 <div class="introduction2 d-flex justify-content-center mt-4">
   <h2 class="text-center">2º Ano</h2><br>
 </div>
@@ -26,7 +24,7 @@
 <div class="row d-flex justify-content-center">
   <div class="col-md-3 d-flex justify-content-center" *ngFor="let item of listaTemas2">
 
-    <div class="card mt-4" style="width: 100vh">
+    <div class="card mt-4" style="width: 95vh">
       <a [routerLink]="['/videopage', item.id]">
       <div class="card-header bg-color2 text-white text-center">{{item.materia}}</div>
       <div class="card-body text-center bg-fundo">
@@ -47,12 +45,13 @@
 <div class="row d-flex justify-content-center">
   <div class="col-md-3 d-flex justify-content-center" *ngFor="let item of listaTemas3">
 
-    <div class="card mt-4 mb-5" style="width: 100vh">
+    <div class="card mt-4 mb-5" style="width: 95vh">
       <a [routerLink]="['/videopage', item.id]">
       <div class="card-header bg-color3 text-white text-center">{{item.materia}}</div>
       <div class="card-body text-center bg-fundo">
         <p class="card-title">{{item.descricao}}</p>
       </div>
     </a>
+</div>
 </div>
 </div>

@@ -1,7 +1,35 @@
-div.introduction {
-    padding: 1em;
-    background: #f5f5f5;
-    box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
+.bg-fundo{
+  background-color: #f5f5f5;
+}
+
+.bg-color{
+  background-color: #53b6df;
+}
+
+.bg-color2{
+  background-color: #fe7f1d;
+}
+
+.bg-color3{
+  background-color: #ff4055;
+}
+
+div.introduction1 {
+  padding: 1em;
+  background: #f5f5f5;
+  box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
+}
+
+div.introduction2 {
+  padding: 1em;
+  background: #f5f5f5;
+  box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
+}
+
+div.introduction3 {
+  padding: 1em;
+  background: #f5f5f5;
+  box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
 }
 
 /* Card Based Layout - Base styles */

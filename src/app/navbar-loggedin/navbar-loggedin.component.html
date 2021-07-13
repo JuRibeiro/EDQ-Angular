@@ -1,19 +1,23 @@
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top pb-0 pt-0" style="background-color: rgba(0, 119, 255, 0.849);">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-navbar">
+    <!-- rgba(0, 119, 255, 0.849) -->
+    <div class="container-fluid">
 
-    <!-- BOTÃO SIDEBAR -->
-    <div class="nav-item">
-        <button class="btn ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
-            aria-controls="offcanvasExample"><span class="navbar-toggler-icon"></span></button>
-    </div>
+        <!-- BOTÃO SIDEBAR -->
+        <div class="nav-item p-0 m-0">
 
-    <!-- LOGO -->
-    <div>
-        <a class="navbar-brand m-3" routerLink='/plataforma'><img src="../../assets/img/logo1.png" width="60px" alt="Logo EDQ"></a>
-    </div>          
+            <button class="btn btn-white ms-2" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><span
+                    class="navbar-toggler-icon"></span></button>
+        </div>
 
-    <!-- PESQUISA -->
-    <div class="collapse navbar-collapse">
-        <div class="navbar-nav me-auto mb-0 mb-lg-0 d-flex align-items-center">
+        <!-- LOGO -->
+        <div class="nav-item p-0 m-0">
+            <a class="navbar-brand m-3" routerLink='/plataforma'><img src="../../assets/img/EDQbrancoAjustado.png"
+                height="38px" alt="Logo EDQ"></a>
+        </div>
+
+        <!-- FORM PESQUISA -->
+        <!-- <div class="navbar-nav me-auto mb-0 mb-lg-0 d-flex align-items-center">
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Busca..." aria-label="Search">
                 <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
@@ -22,33 +26,26 @@
                             d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                     </svg></button>
             </form>
-        </div>
+        </div> -->
 
-
-        <ul class="navbar-nav d-flex align-items-center">
-
-            <li class="nav-item mx-2 mb-0 mt-0 pt-0 pb-0 dropdown">
-                <a class="nav-link dropdown-toggle text-white" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src={{foto}} alt="Foto de perfil" width="45px" height="45px" class="rounded-circle border border-4">⠀{{nome}}
+        <!-- DROPDOWN EDITAR USUÁRIO-->
+        <div class="collapse navbar-collapse">
+            <div class="nav-item ms-auto me-2 mb-0 mt-0 pt-0 pb-0 dropdown">
+                <a class="nav-link dropdown-toggle text-white p-0" id="navbarDarkDropdownMenuLink" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false"><img src={{foto}} alt="Foto de perfil" width="45px"
+                        height="45px" class="rounded-circle border border-4">⠀{{nome}}
                 </a>
-                <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                  <li><a class="dropdown-item text-center" [routerLink]="['/user-edit', id]">Editar Usuário</a></li>
+                <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-light"
+                    aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li><a class="dropdown-item text-center" [routerLink]="['/user-edit', id]">Editar Usuário</a>
+                    </li>
                 </ul>
-              </li>
-
-            <!-- FOTO USUÁRIO -->
-            <!-- <li class="nav-item">
-                <img src={{foto}} alt="Foto de perfil" width="50px" height="50px" class="rounded-circle border border-4">
-            </li> -->
-
-            <!-- NOME USUÁRIO -->
-            <!-- <li class="nav-item me-5">
-                <p class="m-0 ps-3 font-weight-bold text-white fs-16">Olá, {{nome}}</p>
-            </li> -->
+            </div>
 
             <!-- BOTAO LOGOUT -->
-            <li class="nav-item p-0">
+            <div class="nav-item p-0">
                 <a (click)='sair()'>
-                    <button type="submit" class="btn btn-outline-light me-4">Sair
+                    <button type="submit" class="btn btn-outline-light ms-5 me-2">Sair
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-box-arrow-right ms-1" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -58,60 +55,63 @@
                         </svg>
                     </button>
                 </a>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
 
-
     <!-- SIDEBAR -->
-
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
 
         <!-- SIDEBAR HEADER-->
-        <div class="offcanvas-header bg-secondary text-white">
+        <div class="offcanvas-header bg-navbar text-white">
             <h6 class="offcanvas-title ms-2 text-center" id="offcanvasExampleLabel"><a class="navbar-brand"
-                    href="#home"><img src="../../assets/img/logo1.png" width="60px" alt="Logo EDQ"></a><br>A
-                plataforma
-                que iguala seu conhecimento</h6> <button type="button mb-5" class="btn-close btn-danger text-reset"
-                data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    href="#home"><img src="../../assets/img/EDQbrancoAjustado.png" width="60px" alt="Logo EDQ"></a><br>A
+                plataforma que iguala seu conhecimento
+            </h6>
+            <button type="button mb-5" class="btn-close btn-outline-light text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close">
+            </button>
         </div>
 
         <!-- SIDEBAR BODY-->
         <div class="offcanvas-body text-center">
-            <a class="text-reset mb-3" data-bs-dismiss="offcanvas" routerLink='/plataforma'>
+            <a class="text-reset mb-3 text-decoration-none" data-bs-dismiss="offcanvas" routerLink='/plataforma'>
                 <h5>Home</h5>
             </a>
             <hr>
-            <a *ngIf='auth.adm()' class="text-reset mt-0 mb-3" data-bs-dismiss="offcanvas" routerLink='/materias'>
-                <h5 >Matérias</h5>
+            <a *ngIf='auth.adm()' class="text-reset text-decoration-none mt-0 mb-3" data-bs-dismiss="offcanvas" routerLink='/materias'>
+                <h5>Matérias</h5>
             </a>
             <hr *ngIf='auth.adm()'>
 
-            <a *ngIf='auth.adm()' class="text-reset mb-3" data-bs-dismiss="offcanvas" routerLink='/postagens'>
+            <a *ngIf='auth.adm()' class="text-reset  text-decoration-none mb-3" data-bs-dismiss="offcanvas" routerLink='/postagens'>
                 <h5>Postagens</h5>
             </a>
             <hr *ngIf='auth.adm()'>
 
-            <a class="text-reset mb-3" data-bs-dismiss="offcanvas" href="">
+            <!-- <a class="text-reset mb-3" data-bs-dismiss="offcanvas" href="">
                 <h5>Professores</h5>
             </a>
-            <hr>
+            <hr> -->
         </div>
 
-        <div class="container-fluid">
-            <div class="row">
+
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-cinza">
 
                 <!-- FOTO USUÁRIO -->
-                <div class="col-md-2 p-2 d-flex align-items-center bg-info">
-                    <img src={{foto}} alt="Foto de perfil" width="50px" height="50px" class="rounded-circle border border-4">
+                <div class="nav-item me-2 ms-2 mb-0 mt-0 pt-0 pb-0 dropdown">
+                    <a class="nav-link dropdown-toggle text-dark p-0" id="navbarDarkDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false"><img src={{foto}} alt="Foto de perfil" width="45px"
+                            height="45px" class="rounded-circle border border-white border-4">⠀{{nome}}
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-light"
+                        aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li><a class="dropdown-item text-center" [routerLink]="['/user-edit', id]">Editar Usuário</a>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- NOME USUÁRIO -->
-                <div class="col-md-8 p-2 ps-0 bg-info d-flex align-items-center flex-shrink-1">
-                    <p class="collapse navbar-collapse m-0 ps-3 font-weight-bold fs-16">{{nome}}</p>
-                </div>
-
-                <div class="col-md-2 p-2 bg-info d-flex align-items-center">
+                <div class="nav-item p-2 ms-auto me-3 d-flex align-items-center">
                     <a (click)='sair()'>
                         <button type="submit" class="btn btn-outline-danger" data-bs-dismiss="offcanvas">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -124,13 +124,13 @@
                         </button>
                     </a>
                 </div>
-            </div>
-        </div>
+         </nav>
 
         <!-- SIDEBAR FOOTER -->
-        <div class="offcanvas-footer bg-secondary text-white text-center">
+        <div class="offcanvas-footer bg-navbar text-white text-center">
             <div class="col-md-12 mt-3 mb-2">
-                <a href="mailto:EDQ.contato@gmail.com?Subject=Mensagem%20de%20{{nome}}" class="me-2 text-reset" target="_blank">
+                <a href="mailto:EDQ.contato@gmail.com?Subject=Mensagem%20de%20{{nome}}" class="me-2 text-reset"
+                    target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-envelope-fill" viewBox="0 0 16 16">
                         <path
@@ -152,7 +152,5 @@
                     target="_blank">brazil.generation.org</a>
             </div>
         </div>
-
     </div>
-
 </nav>

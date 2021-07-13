@@ -18,6 +18,10 @@ html{
 .bg-laranja{
     background-color: #fe7f1d;
 }
+
+.bg-footer{
+    background-color: #f5f5f5;
+}
 .tela-cheia{
     height: 100vh;
 }
@@ -28,3 +32,30 @@ html{
 .fonte-geral{
     font-family: 'Poppins', sans-serif;
 }
+
+.bg-navbar{
+    background-color: #ff766e;
+    /* 
+    #ff6e7e  rosa
+    #ff766e salmao
+    #ff9e53 laranja
+    #53b6df azul*/
+}
+.bg-cinza{
+    background-color: #e5e5e5;
+}
+
+/* .btn-primary{
+    background-color: #53b6df !important;
+} */
+
+.btn-danger{
+    background-color: #ff4055 !important;
+}
+
+.btn-secondary{
+    background-color: #ff766e !important;
+    color: white !important;
+    border-color: #ff766e !important;
+}
+

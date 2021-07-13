@@ -75,16 +75,16 @@
 
         <!-- SIDEBAR BODY-->
         <div class="offcanvas-body text-center">
-            <a class="text-reset mb-3" data-bs-dismiss="offcanvas" routerLink='/plataforma'>
+            <a class="text-reset mb-3 text-decoration-none" data-bs-dismiss="offcanvas" routerLink='/plataforma'>
                 <h5>Home</h5>
             </a>
             <hr>
-            <a *ngIf='auth.adm()' class="text-reset mt-0 mb-3" data-bs-dismiss="offcanvas" routerLink='/materias'>
+            <a *ngIf='auth.adm()' class="text-reset text-decoration-none mt-0 mb-3" data-bs-dismiss="offcanvas" routerLink='/materias'>
                 <h5>Matérias</h5>
             </a>
             <hr *ngIf='auth.adm()'>
 
-            <a *ngIf='auth.adm()' class="text-reset mb-3" data-bs-dismiss="offcanvas" routerLink='/postagens'>
+            <a *ngIf='auth.adm()' class="text-reset  text-decoration-none mb-3" data-bs-dismiss="offcanvas" routerLink='/postagens'>
                 <h5>Postagens</h5>
             </a>
             <hr *ngIf='auth.adm()'>

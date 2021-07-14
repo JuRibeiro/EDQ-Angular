@@ -1,17 +1,21 @@
 .bg-fundo{
   background-color: #f5f5f5;
+  box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
 }
 
 .bg-color{
   background-color: #53b6df;
+  box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
 }
 
 .bg-color2{
   background-color: #fe7f1d;
+  box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
 }
 
 .bg-color3{
   background-color: #ff4055;
+  box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
 }
 
 div.introduction1 {

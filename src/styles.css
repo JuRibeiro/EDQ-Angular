@@ -1,12 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap');
+
 
 html{
     scroll-behavior: smooth;
 }
 
-.fonte-geral{
-    font-family: 'Poppins', sans-serif;
+.fonte-titulo{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400px;
+}
+
+.fonte-texto{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300px; 
 }
 
 .bg-azul{
@@ -27,10 +34,6 @@ html{
 }
 .fs-principal{
     font-size: 3em;
-}
-
-.fonte-geral{
-    font-family: 'Poppins', sans-serif;
 }
 
 .bg-navbar{

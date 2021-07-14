@@ -6,7 +6,7 @@ html{
     scroll-behavior: smooth;
 }
 
-.fonte-titulo{
+/* .fonte-titulo{
     font-family: 'Roboto', sans-serif;
     font-weight: 400px;
 }
@@ -14,7 +14,7 @@ html{
 .fonte-texto{
     font-family: 'Roboto', sans-serif;
     font-weight: 300px; 
-}
+} */
 
 .bg-azul{
     background-color: #53b6df;

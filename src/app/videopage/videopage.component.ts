@@ -55,7 +55,8 @@ export class VideopageComponent implements OnInit {
 
     this.temaService.refreshToken()
     this.postagemService.refreshToken()
-
+    this.comentarioService.refreshToken()
+    
     window.scroll(0,0)
     
     this.idMateria = this.route.snapshot.params['id']

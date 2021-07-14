@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Postagem } from 'src/app/model/Postagem';
 import { Tema } from 'src/app/model/Tema';
+import { User } from 'src/app/model/User';
 import { PostagemService } from 'src/app/service/postagem.service';
 import { TemaService } from 'src/app/service/tema.service';
 import { environment } from 'src/environments/environment.prod';
@@ -14,7 +15,7 @@ import { environment } from 'src/environments/environment.prod';
 export class PostagemEditComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
-
+  user: User = new User()
   tema: Tema = new Tema()
   listaTemas: Tema[]
   idTema: number
@@ -37,11 +38,13 @@ export class PostagemEditComponent implements OnInit {
 
     if(environment.tipoUsuario != 'adm'){
       alert('Você não tem permissão para acessar essa página')
-      this.router.navigate(['/plataforma'])
+      this.router.navigate(['/login'])
     }
     let id = this.route.snapshot.params['id']
+    this.postagemService.refreshToken()
     this.findByIdPostagem(id)
-    this.findAllTemas()
+    this.user.id = environment.id
+/*     this.findAllTemas() */
   }
   getTemaAno(event:any){
     return this.temaService.getByAnoConteudo(event.target.value).subscribe((resp:Tema[])=>{
@@ -66,19 +69,19 @@ export class PostagemEditComponent implements OnInit {
     })
   }
 
-  findAllTemas()
+/*   findAllTemas()
   {
     this.temaService.getAllTema().subscribe((resposta: Tema[])=>
     {
       this.listaTemas = resposta
     })
-  }
+  } */
 
   atualizar()
   {
-    this.tema.id=this.idTema
+/*     this.postagem.tema.id=this.idTema */
     this.postagem.tema=this.tema
-
+    this.postagem.usuario= this.user
     this.postagemService.putPostagem(this.postagem).subscribe((resposta: Postagem)=>
     {
       this.postagem = resposta

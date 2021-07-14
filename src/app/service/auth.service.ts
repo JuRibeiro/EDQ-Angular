@@ -60,5 +60,14 @@ export class AuthService {
 
     return ok 
   }
+  notAdm(){
+    let ok: boolean = false
+
+    if(environment.tipoUsuario != 'adm'){
+      ok = true
+    }
+
+    return ok 
+  }
 
 } 

@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 html{
     scroll-behavior: smooth;
+}
+
+.fonte-geral{
+    font-family: 'Poppins', sans-serif;
 }
 
 .bg-azul{
@@ -12,9 +18,44 @@ html{
 .bg-laranja{
     background-color: #fe7f1d;
 }
+
+.bg-footer{
+    background-color: #f5f5f5;
+}
 .tela-cheia{
     height: 100vh;
 }
 .fs-principal{
     font-size: 3em;
 }
+
+.fonte-geral{
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-navbar{
+    background-color: #ff766e;
+    /* 
+    #ff6e7e  rosa
+    #ff766e salmao
+    #ff9e53 laranja
+    #53b6df azul*/
+}
+.bg-cinza{
+    background-color: #e5e5e5;
+}
+
+/* .btn-primary{
+    background-color: #53b6df !important;
+} */
+
+.btn-danger{
+    background-color: #ff4055 !important;
+}
+
+.btn-secondary{
+    background-color: #ff766e !important;
+    color: white !important;
+    border-color: #ff766e !important;
+}
+

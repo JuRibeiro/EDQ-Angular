@@ -28,7 +28,7 @@ export class ProfbarComponent implements OnInit {
   ngOnInit() {
     this.temaService.refreshToken()
     this.postagemService.refreshToken()
-    this.findAllTemas()
+    /* this.findAllTemas() */
   }
 
   postTemaId(event:any){
@@ -42,13 +42,13 @@ export class ProfbarComponent implements OnInit {
     })
   }
 
-  findAllTemas()
+/*   findAllTemas()
   {
     this.temaService.getAllTema().subscribe((resposta: Tema[])=>
     {
       this.listaTemas=resposta
     })
-  }
+  } */
 
   cadastrarMateria()
   {
@@ -56,7 +56,6 @@ export class ProfbarComponent implements OnInit {
     {
       this.tema = resposta
       alert('Matéria cadastrada com sucesso!')
-      this.findAllTemas()
       this.tema = new Tema()
     })
   }
@@ -66,7 +65,9 @@ export class ProfbarComponent implements OnInit {
     this.postagem.tema = this.tema
     this.user.id = environment.id
     this.postagem.usuario = this.user
-    console.table(this.postagem)
+    //copiar linha 70 em atualizar
+    this.postagem.link_video = this.postagem.link_video.replace("watch?v=", "embed/")
+   // console.table(this.postagem)
     this.postagemService.postPostagem(this.postagem).subscribe((resp:Postagem) =>{
       this.postagem=resp
       alert('Aula postada com sucesso!')

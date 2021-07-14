@@ -2,9 +2,10 @@
     color: #0b5575;
 }
 
-.fonte-texto{
+.fonte-t{
     color: #7a7979;
-    font-family: arial;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400px;
     font-size: 14px;
     font-style: italic;
     margin-top: 4px;

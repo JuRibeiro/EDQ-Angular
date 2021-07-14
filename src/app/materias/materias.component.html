@@ -1,86 +1,62 @@
-<!--DIV Materias-->
+<!--COMPONENTE MATÉRIAS-->
 <div class="container-fluid">
-    <div class="row bg-navbar">
-        <div class="col-md-12 text-white">
+  <div class="row">
 
-            <!--<a routerLink='/plataforma' class="text-white text-left">
-                <i class="fa fa-angle-double-left" aria-hidden="true"></i>Voltar à plataforma
-            </a>-->
+    <!-- HEADER -->
+    <div class="col-md-12 bg-navbar text-white">
       <h1 class="fontsize54 text-center">Matérias</h1>
-      <h5 class="fontsize18 text-center">Veja todos as matérias cadastradas, ou cadastre uma nova:</h5>
-      <div class="row d-flex justify-content-center mt-4 mb-5">
-        <div class="col-md-3">
-          <div class="form-group mb-3">
-            <input [(ngModel)]='tema.materia' type="text" class="form-control" id="descricao" placeholder="Matéria">
-          </div>
-          <div class="form-group mb-1">
-            <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="descricao"
-              placeholder="Descrição da matéria">
-          </div>
-          <div class="form-group mb-3">
-            <label>Escolha o ano:</label>
-            <select name="" [(ngModel)]='tema.anoConteudo' class="form-select mt-1" id="">
-              <option value="">Escolha o ano</option>
-              <option value="1º ano">1º ano</option>
-              <option value="2º ano">2º ano</option>
-              <option value="3º ano">3º ano</option>
-            </select>
-          </div>
-          <div class="d-flex justify-content-center">
-            <button class="btn btn-light" (click)='cadastrar()'>Cadastrar</button>
-          </div>
+      <h5 class="fontsize18 text-center mb-4">Veja todos as matérias cadastradas</h5>
+    </div>
+    <!-- HEADER -->
+    
+    <!-- PESQUISA -->
+    <div class="row mt-5 d-flex justify-content-center align-items-center">
+      <div class="col-md-10 d-flex justify-content-center align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+        viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </svg>
+        <div class="form-group ms-3">
+          <input type="text" class="form-control" id="materia" placeholder="Busca de matérias..."
+          [(ngModel)]='materiaPost' (keyup)='finByTituloTema()'>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<!--/DIV materias-->
+    <!-- PESQUISA -->
 
-<!--DIV LISTA DE MATÉRIAS-->
-<div class="container">
-  <div class="row mt-5">
-    <div class="col-md-12">
-      <h2 class="text-center">Todas as matérias</h2>
-    </div>
-
-<!--DIV BARRA DE PESQUISA-->
-    <div class="row d-flex justify-content-center mt-5 mb-5">
-      <div class="col-md-5">
-        <div class="form-group">
-          <input type="text" class="form-control" id="materia" placeholder="Digite o nome de uma matéria para realizar uma busca" [(ngModel)]='materiaPost' (keyup)='finByTituloTema()'>
+    <!-- TABELA -->
+    <div class="row mt-3 mb-5 d-flex justify-content-center align-items-center">
+      <div class="col-md-12">
+        <div class="table-responsive">
+          <table class="table table-hover text-center align-middle">
+            <thead>
+              <tr>
+                <th scope="col">Matéria</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Ano conteúdo</th>
+                <th scope="col">Modificações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor='let tema of listaTemas'>
+                <th>{{tema.materia}}</th>
+                <td>{{tema.descricao}}</td>
+                <td>{{tema.anoConteudo}}</td>
+                <td>
+                  <button class="btn btn-info m-3" [routerLink]="['/materia-edit', tema.id]">Editar</button>
+                  <button class="btn btn-danger" [routerLink]="['/materia-delete', tema.id]">Apagar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="mt-5">
+          <button routerLink='/plataforma' class="btn btn-secondary text-white text-left">
+            <i class="fa fa-angle-double-left" aria-hidden="true"></i>Voltar à plataforma
+          </button>
         </div>
       </div>
     </div>
-<!--/DIV BARRA DE PESQUISA-->
-
-    <div class="row mt-3 mb-5 d-flex justify-content-center">
-        <div class="col-md-10">
-          <div class="table-responsive">
-            <table class="table table-hover text-center">
-                <thead>
-                  <tr>
-                    <th scope="col">Matéria</th>
-                    <th scope="col">Descrição</th>
-                    <th scope="col">Ano conteúdo</th>
-                    <th scope="col">Modificações</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor='let tema of listaTemas'>
-                    <th>{{tema.materia}}</th>
-                    <td>{{tema.descricao}}</td>
-                    <td>{{tema.anoConteudo}}</td>
-                    <td>
-                      <button class="btn btn-info m-3" [routerLink]="['/materia-edit', tema.id]">Editar</button>
-                      <button class="btn btn-danger" [routerLink]="['/materia-delete', tema.id]">Apagar</button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-          </div>
-        </div>
-
-    </div>
+    <!-- /TABELA -->
+    
   </div>
 </div>
-<!--/DIV LISTA DE MATÉRIAS-->
+<!--/COMPONENTE MATÉRIAS-->

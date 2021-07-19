@@ -29,6 +29,8 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { PostagensComponent } from './postagens/postagens.component';
 import { VideopageComponent } from './videopage/videopage.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
+import { AlertComponent } from './alert/alert.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -57,13 +59,15 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
     PostagensComponent,
     VideopageComponent,
     UserEditComponent,
+    AlertComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers: [
     {provide:LocationStrategy,

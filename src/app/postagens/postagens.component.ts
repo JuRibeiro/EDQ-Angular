@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
+import { AlertService } from '../service/alert.service';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 
@@ -18,18 +19,20 @@ export class PostagensComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private PostagemService: PostagemService
+    private PostagemService: PostagemService,
+    private alertas:AlertService
   ) { }
 
   ngOnInit(){
-
+    window.scroll(0,0)
     if (environment.token == '')
     {
-      alert('Sua sessão expirou. Faça login novamente.')
+      this.alertas.showAlertInfo('Sua sessão expirou. Faça login novamente.')
       this.router.navigate(['/login'])
     }
-    if(environment.tipoUsuario != 'adm'){
-      alert('Você não tem permissão para acessar essa página')
+
+    if(environment.tipoUsuario != 'adm' && environment.token != ''){
+      this.alertas.showAlertDanger('Você não tem permissão para acessar essa página')
       this.router.navigate(['/plataforma'])
     }
     

@@ -18,9 +18,9 @@
                 </div>
 
                 <!--Comentarios -->
-                <div class="accordion" [attr.id]="'comentarioPostagem' + idPostagem" >
+                <div  [attr.id]="'comentarioPostagem' + idPostagem" >
 
-                    <div class="mt-2" id="headingTwo">
+<!--                     <div class="mt-2" id="headingTwo">
                         <h5 class="mb-0">
                             <button (click)='findAllComentarios()' class="btn btn-link collapsed text-dark" type="button" data-bs-toggle="collapse"
                                 [attr.data-bs-target]="'#' + 'comentButtonPostagemId' + idPostagem" aria-expanded="false"
@@ -30,9 +30,9 @@
                                 </p>
                             </button>
                         </h5>
-                    </div>
+                    </div> -->
 
-                    <div [attr.id]="'comentButtonPostagemId' + idPostagem" class="collapse" aria-labelledby="headingTwo"
+                    <div [attr.id]="'comentButtonPostagemId' + idPostagem"  aria-labelledby="headingTwo"
                         [attr.data-parent]="'#' + 'comentarioPostagem' + idPostagem">
 
                         <div class="row mb-3">

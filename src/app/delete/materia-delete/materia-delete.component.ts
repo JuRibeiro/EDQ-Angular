@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Tema } from 'src/app/model/Tema';
+import { AlertService } from 'src/app/service/alert.service';
 import { TemaService } from 'src/app/service/tema.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -17,16 +18,19 @@ export class MateriaDeleteComponent implements OnInit {
   constructor(
     private temaService: TemaService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alertas:AlertService
   ) { }
 
   ngOnInit() {
-    if(environment.token == ''){
-      this.router.navigate(['/entrar'])
+    if (environment.token == '')
+    {
+      this.alertas.showAlertInfo('Sua sessão expirou. Faça login novamente.')
+      this.router.navigate(['/login'])
     }
 
-    if(environment.tipoUsuario != 'adm'){
-      alert('Você não tem permissão para acessar essa página')
+    if(environment.tipoUsuario != 'adm' && environment.token != ''){
+      this.alertas.showAlertDanger('Você não tem permissão para acessar essa página')
       this.router.navigate(['/plataforma'])
     }
     this.idTema = this.route.snapshot.params['id']
@@ -42,7 +46,7 @@ export class MateriaDeleteComponent implements OnInit {
 
   apagar(){
     this.temaService.deleteTema(this.idTema).subscribe(()=>{
-      alert('Matéria apagada com sucesso!')
+      this.alertas.showAlertSuccess('Matéria apagada com sucesso!')
       this.router.navigate(['/materias'])
     })
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { AlertService } from '../service/alert.service';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
@@ -16,13 +17,15 @@ export class PlataformaComponent implements OnInit {
     public auth: AuthService,
     private router: Router,
     private temaService: TemaService,
-    private postagemService: PostagemService
+    private postagemService: PostagemService,
+    private alertas:AlertService
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
     if (environment.token == '')
     {
-      alert('Sua sessão expirou. Faça login novamente')
+      this.alertas.showAlertInfo('Sua sessão expirou. Faça login novamente')
       this.router.navigate(['/login'])
     }
 

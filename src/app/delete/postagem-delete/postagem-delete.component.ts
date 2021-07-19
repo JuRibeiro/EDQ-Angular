@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Postagem } from 'src/app/model/Postagem';
 import { Tema } from 'src/app/model/Tema';
+import { AlertService } from 'src/app/service/alert.service';
 import { PostagemService } from 'src/app/service/postagem.service';
 import { TemaService } from 'src/app/service/tema.service';
 import { environment } from 'src/environments/environment.prod';
@@ -19,20 +20,22 @@ export class PostagemDeleteComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private postagemService: PostagemService
+    private postagemService: PostagemService,
+    private alertas:AlertService
   ) { }
 
   ngOnInit() {
 
     window.scroll(0,0)
 
-    if (environment.token=='')
+    if (environment.token == '')
     {
+      this.alertas.showAlertInfo('Sua sessão expirou. Faça login novamente.')
       this.router.navigate(['/login'])
     }
 
-    if(environment.tipoUsuario != 'adm'){
-      alert('Você não tem permissão para acessar essa página')
+    if(environment.tipoUsuario != 'adm' && environment.token != ''){
+      this.alertas.showAlertDanger('Você não tem permissão para acessar essa página')
       this.router.navigate(['/plataforma'])
     }
 
@@ -52,7 +55,7 @@ export class PostagemDeleteComponent implements OnInit {
   {
     this.postagemService.deletePostagem(this.idPost).subscribe(()=>
     {
-      alert('Postagem apagada com sucesso!')
+      this.alertas.showAlertSuccess('Postagem apagada com sucesso!')
       this.router.navigate(['/postagens'])
     })
   }

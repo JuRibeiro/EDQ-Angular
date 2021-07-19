@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/model/User';
+import { AlertService } from 'src/app/service/alert.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -19,17 +20,19 @@ export class UserEditComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private alertas:AlertService
   ) { }
 
   ngOnInit() {
     window.scroll(0, 0)
 
       
-      if (environment.token == '') 
-      {
-        this.router.navigate(['/login'])
-      }
+    if (environment.token == '')
+    {
+      this.alertas.showAlertInfo('Sua sessão expirou. Faça login novamente.')
+      this.router.navigate(['/login'])
+    }
       
       this.authService.refreshToken()
       this.idUser = this.route.snapshot.params['id']
@@ -49,14 +52,14 @@ export class UserEditComponent implements OnInit {
 
     if(this.user.senha != this.confirmarSenha) 
      {
-      alert('As senhas estão divergentes!')
+      this.alertas.showAlertDanger('As senhas estão divergentes!')
     }
     else
     {
       this.authService.atualizar(this.user).subscribe((resp:User)=>{
         this.user=resp
         this.router.navigate(['/plataforma'])
-        alert(`${this.user.nomeCompleto} Atualizado com sucesso! Faça o login novamente.`)
+        this.alertas.showAlertSuccess(`${this.user.nomeCompleto} Atualizado com sucesso! Faça o login novamente.`)
         environment.token = ''
         environment.nomeCompleto = ''
         environment.email = ''

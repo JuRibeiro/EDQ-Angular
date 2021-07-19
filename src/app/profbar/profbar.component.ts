@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { User } from '../model/User';
+import { AlertService } from '../service/alert.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
 
@@ -23,6 +24,7 @@ export class ProfbarComponent implements OnInit {
     private temaService: TemaService,
     private postagemService: PostagemService,
     private router: Router,
+    private alertas:AlertService
   ) { }
 
   ngOnInit() {
@@ -55,7 +57,7 @@ export class ProfbarComponent implements OnInit {
     this.temaService.postTema(this.tema).subscribe((resposta: Tema)=>
     {
       this.tema = resposta
-      alert('Matéria cadastrada com sucesso!')
+      this.alertas.showAlertSuccess('Matéria cadastrada com sucesso!')
       this.tema = new Tema()
     })
   }
@@ -70,7 +72,7 @@ export class ProfbarComponent implements OnInit {
    // console.table(this.postagem)
     this.postagemService.postPostagem(this.postagem).subscribe((resp:Postagem) =>{
       this.postagem=resp
-      alert('Aula postada com sucesso!')
+      this.alertas.showAlertSuccess('Aula postada com sucesso!')
       this.postagem = new Postagem()
       this.tema = new Tema()
     })

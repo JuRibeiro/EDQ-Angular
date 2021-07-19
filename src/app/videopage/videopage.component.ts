@@ -7,6 +7,7 @@ import { Comentario } from '../model/Comentario';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { User } from '../model/User';
+import { AlertService } from '../service/alert.service';
 import { ComentarioService } from '../service/comentario.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
@@ -41,7 +42,8 @@ export class VideopageComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private postagemService: PostagemService,
-    private comentarioService: ComentarioService
+    private comentarioService: ComentarioService,
+    private alertas:AlertService
   
     ) { }
 
@@ -49,7 +51,7 @@ export class VideopageComponent implements OnInit {
 
     if (environment.token == '')
     {
-      alert('Sua sessão expirou. Faça login novamente')
+      this.alertas.showAlertInfo('Sua sessão expirou. Faça login novamente')
       this.router.navigate(['/login'])
     }
 
@@ -73,12 +75,10 @@ export class VideopageComponent implements OnInit {
     this.video=link
     this.url = this.video;
     this.urlSafe= this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
-    console.log(this.video)
   }
 
   /* Playlist */
   getMateriaId(){
-    console.log(this.idMateria)
     this.temaService.getByIdTema(this.idMateria).subscribe((resp:Tema)=>{
       this.tema=resp
       let postagens = this.tema.postagem
@@ -87,7 +87,7 @@ export class VideopageComponent implements OnInit {
   }
 
   trocarAula(linkVideo:string, titulo:string, descricao: string, id:number, video:Postagem){
-    console.log(titulo)
+
     this.video=linkVideo
     this.titulo = titulo
     this.descricao = descricao
@@ -95,7 +95,7 @@ export class VideopageComponent implements OnInit {
     this.postagem=video;
     this.url = this.video;
     this.urlSafe= this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
-    console.log(this.video)
+
   }
 
   findAllComentarios()

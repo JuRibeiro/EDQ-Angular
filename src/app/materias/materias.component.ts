@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { environment } from 'src/environments/environment.prod';
 import { Tema } from '../model/Tema';
+import { AlertService } from '../service/alert.service';
 import { TemaService } from '../service/tema.service';
 
 @Component({
@@ -18,18 +19,20 @@ export class MateriasComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private temaService: TemaService
+    private temaService: TemaService,
+    private alertas:AlertService
   ) { }
 
   ngOnInit(){
+    window.scroll(0,0)
     if (environment.token == '')
     {
-      alert('Sua sessão expirou. Faça login novamente.')
+      this.alertas.showAlertInfo('Sua sessão expirou. Faça login novamente.')
       this.router.navigate(['/login'])
     }
 
-    if(environment.tipoUsuario != 'adm'){
-      alert('Você não tem permissão para acessar essa página')
+    if(environment.tipoUsuario != 'adm' && environment.token != ''){
+      this.alertas.showAlertDanger('Você não tem permissão para acessar essa página')
       this.router.navigate(['/plataforma'])
     }
     this.findAllTemas()

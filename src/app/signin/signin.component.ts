@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../model/User';
+import { AlertService } from '../service/alert.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -16,7 +17,8 @@ export class SigninComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    private router: Router
+    private router: Router,
+    private alertas:AlertService
   ) { }
 
   ngOnInit() {
@@ -41,13 +43,13 @@ export class SigninComponent implements OnInit {
 
     if(this.user.senha != this.confirmarSenha)
     {
-      alert('As senhas estão divergentes!')
+      this.alertas.showAlertDanger('As senhas estão divergentes!')
     }
     else
     {
       this.auth.cadastrar(this.user).subscribe((resposta:User)=>{
         this.user=resposta
-        alert(`${this.user.nomeCompleto} cadastrado com sucesso`)
+        this.alertas.showAlertSuccess(`${this.user.nomeCompleto} cadastrado com sucesso`)
         this.router.navigate(['/login'])
       })
     }

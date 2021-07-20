@@ -4,9 +4,12 @@
         <div class="col-md-8">
             <h2 class="mb-3 mt-5">Aula: {{titulo}}</h2>
         </div>
+    </div>
+
 
         <div class="row ">
 
+            <!-- VIDEO E DESCRIÇÃO -->
             <div class="col-md-8">
                 <div class="ratio ratio-16x9">
                     <iframe [src]="urlSafe"></iframe>
@@ -16,76 +19,10 @@
                     <h5>Descrição:</h5>
                     <p>{{descricao}}</p>
                 </div>
-
-                <!--Comentarios -->
-                <div  [attr.id]="'comentarioPostagem' + idPostagem" >
-
-<!--                     <div class="mt-2" id="headingTwo">
-                        <h5 class="mb-0">
-                            <button (click)='findAllComentarios()' class="btn btn-link collapsed text-dark" type="button" data-bs-toggle="collapse"
-                                [attr.data-bs-target]="'#' + 'comentButtonPostagemId' + idPostagem" aria-expanded="false"
-                                aria-controls="collapseTwo">
-                                <p class="text-primary font-weight-bold mb-2">
-                                    <i class="fa fa-commenting-o" aria-hidden="true"></i> Comentar
-                                </p>
-                            </button>
-                        </h5>
-                    </div> -->
-
-                    <div [attr.id]="'comentButtonPostagemId' + idPostagem"  aria-labelledby="headingTwo"
-                        [attr.data-parent]="'#' + 'comentarioPostagem' + idPostagem">
-
-                        <div class="row mb-3">
-                            <div class="col d-flex justify-content-center align-items-center p-4">
-                                <img class="rounded-circle me-3" src={{fotoUserLogado}} width="30px" height="30px" />
-                                <div class="input-group w-100">
-                                    <input type="text" class="form-control me-3"
-                                        placeholder="Digite aqui seu comentário" aria-label="Recipient's username"
-                                        aria-describedby="button-addon2" [(ngModel)]='comentario.comentario'
-                                        id='inputComentario'>
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-primary" (click)='comentar(idPostagem)'
-                                            id="button-addon2">Comentar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row d-flex justify-content-center"
-                            *ngFor='let coment of postagem.comentario'>
-                            <div class="col-md-11">
-                                <div class="card mb-3 shadow border-0 rounded">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col d-flex justify-content-start">
-                                                <p> <img class=rounded-circle src={{coment.usuario.foto}} width="30px"
-                                                        height="30px" />
-                                                    {{coment.usuario.nomeCompleto}} comentou: </p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <p class="card-text ml-4" aria-describedby="texto">{{coment.comentario}}
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <hr>
-
-                                        <div class="d-flex justify-content-end">
-                                            <small id="texto" class="form-text m-0 text-muted text-monospace">
-                                                Comentado em {{ coment.data | date:'dd/MM/yyyy'}} às {{coment.data |
-                                                date:'HH:mm'}}
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--/Comentarios-->
-
             </div>
+            <!-- /VIDEO E DESCRIÇÃO -->
+
+            <!-- PLAYLIST -->
             <div class="col-md-4">
                 <nav class="navbar navbar-light px-3 text-white" style="background-color: rgba(0, 119, 255, 0.849);">
                     <ul class="nav nav-pills d-flex align-items-center">
@@ -114,6 +51,83 @@
 
                 </div>
             </div>
+            <!-- /PLAYLIST -->
 
         </div>
-    </div>
+            <!--/Comentarios-->
+
+        <div class="row mt-5">
+            <div class="col md-10">
+                <div class="card bg-secondary text-dark" style="border-radius: 18px;">
+                    <div [attr.id]="'comentarioPostagem' + idPostagem">
+
+                        <!--<div class="mt-2" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button (click)='findAllComentarios()' class="btn btn-link collapsed text-dark" type="button" data-bs-toggle="collapse"
+                                [attr.data-bs-target]="'#' + 'comentButtonPostagemId' + idPostagem" aria-expanded="false"
+                                aria-controls="collapseTwo">
+                                <p class="text-primary font-weight-bold mb-2">
+                                    <i class="fa fa-commenting-o" aria-hidden="true"></i> Comentar
+                                </p>
+                            </button>
+                        </h5>
+                    </div> -->
+
+                        <div [attr.id]="'comentButtonPostagemId' + idPostagem" aria-labelledby="headingTwo"
+                            [attr.data-parent]="'#' + 'comentarioPostagem' + idPostagem">
+
+                            <div class="row mb-3">
+                                <div class="col d-flex justify-content-center align-items-center p-4">
+                                    <img class="rounded-circle me-3" src={{fotoUserLogado}} width="40px"
+                                        height="40px" />
+                                    <div class="input-group w-100">
+                                        <input type="text" class="form-control me-3"
+                                            placeholder="Digite aqui seu comentário" aria-label="Recipient's username"
+                                            aria-describedby="button-addon2" [(ngModel)]='comentario.comentario'
+                                            id='inputComentario'>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-light" (click)='comentar(idPostagem)'
+                                                id="button-addon2">Comentar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center" *ngFor='let coment of postagem.comentario'>
+                                <div class="col-md-11">
+                                    <div class="card mb-3 shadow border-0 rounded">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col d-flex justify-content-start">
+                                                    <p> <img class=rounded-circle src={{coment.usuario.foto}}
+                                                            width="30px" height="30px" />
+                                                        {{coment.usuario.nomeCompleto}} comentou: </p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="card-text ml-4" aria-describedby="texto">
+                                                        {{coment.comentario}}
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <hr>
+
+                                            <div class="d-flex justify-content-end">
+                                                <small id="texto" class="form-text m-0 text-muted text-monospace">
+                                                    Comentado em {{ coment.data | date:'dd/MM/yyyy'}} às {{coment.data |
+                                                    date:'HH:mm'}}
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col md-2"></div>
+            <!--/Comentarios-->
+        </div>
+   

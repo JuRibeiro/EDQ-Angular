@@ -2,23 +2,23 @@
 <div class="container mt-5 mb-5">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="text-center text-secondary">Atualizar postagem</h1>
+            <h1 class="text-center text-secondary">Atualizar aula</h1>
         </div>
     </div>
     <div class="row d-flex justify-content-center">
         <div class="col-md-6">
             <div class="form-group mb-2">
-                <label for="titulo">Titulo da postagem</label>
+                <label for="titulo">Titulo da aula</label>
                 <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo" placeholder="Informe o titulo">
             </div>
     
             <div class="form-group mb-2">
-                <label for="titulo">Descrição da postagem</label>
+                <label for="titulo">Descrição da aula</label>
                 <textarea [(ngModel)]='postagem.descricao' class="form-control" name="texto" id="texto" rows="3"></textarea>
             </div>
 
             <div class="form-group mb-2">
-                <label for="titulo">Link da postagem</label>
+                <label for="titulo">Link da aula</label>
                 <div class="form-group mb-2">
                     <input [(ngModel)]='postagem.link_video' type="text" class="form-control"  placeholder="Link do conteúdo">
                 </div>
@@ -30,7 +30,7 @@
             <div class="form-group mb-3">
                 <label>Escolha o ano</label>
                 <select name="" (change)='getTemaAno($event)' class="form-select mt-1" >
-                    <option value="">Escolha o ano</option>
+                    <option value=" "> </option>
                     <option  value="1º ano" >1º ano</option>
                     <option  value="2º ano" >2º ano</option>
                     <option  value="3º ano" >3º ano</option>
@@ -40,7 +40,7 @@
 
                 <label for="titulo">Escolha uma matéria <a data-bs-dismiss="modal" routerLink='/tema'> </a> </label>
 
-                <select class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()' name="tema" id="tema">
+                <select class="form-select" [(ngModel)]='idTema' (change)='findByIdTema()' name="tema" id="tema">
                     <option *ngFor='let item of listaTemas' value="{{item.id}}">
                         {{item.materia}}
                     </option>

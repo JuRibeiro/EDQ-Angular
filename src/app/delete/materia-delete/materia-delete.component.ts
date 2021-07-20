@@ -46,7 +46,7 @@ export class MateriaDeleteComponent implements OnInit {
 
   apagar(){
     this.temaService.deleteTema(this.idTema).subscribe(()=>{
-      this.alertas.showAlertSuccess('Matéria apagada com sucesso!')
+      this.alertas.showAlertSuccess('Matéria e todas as aulas relacionadas apagadas com sucesso!')
       this.router.navigate(['/materias'])
     })
   }

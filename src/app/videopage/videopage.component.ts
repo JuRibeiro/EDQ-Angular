@@ -123,4 +123,33 @@ export class VideopageComponent implements OnInit {
     })
   }
 
+  ano1(){
+    let ok: boolean = false
+
+    if(this.tema.anoConteudo == '1º ano'){
+      ok = true
+    }
+
+    return ok 
+  }
+
+  ano2(){
+    let ok: boolean = false
+
+    if(this.tema.anoConteudo == '2º ano'){
+      ok = true
+    }
+
+    return ok 
+  }
+
+  ano3(){
+    let ok: boolean = false
+
+    if(this.tema.anoConteudo == '3º ano'){
+      ok = true
+    }
+
+    return ok 
+  }
 }

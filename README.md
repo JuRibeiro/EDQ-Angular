@@ -4,7 +4,8 @@
 
 # A plataforma que iguala o seu conhecimento:
 
-[ Acesso a nossa rede social](https://edq-ensino.netlify.app/): https://edq-ensino.netlify.app/
+[ Acesso a nossa rede social](https://edq-ensino.netlify.app/): https://edq-ensino.netlify.app/ 
+<br>
 Trello: https://trello.com/invite/b/5PRSkUge/82ae5db246eebbcf84d7d95d8a6f3fc3/template-kanban
 
 ## 🎯 O PROJETO

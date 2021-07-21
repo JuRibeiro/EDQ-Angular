@@ -85,10 +85,11 @@ export class PostagemEditComponent implements OnInit {
 /*     this.postagem.tema.id=this.idTema */
     this.postagem.tema=this.tema
     this.postagem.usuario= this.user
+    this.postagem.link_video = this.postagem.link_video.replace("watch?v=", "embed/")
     this.postagemService.putPostagem(this.postagem).subscribe((resposta: Postagem)=>
     {
       this.postagem = resposta
-      this.alertas.showAlertSuccess('Postagem atualizada com sucesso!')
+      this.alertas.showAlertSuccess('Aula atualizada com sucesso!')
       this.router.navigate(['/postagens'])
     })
   }

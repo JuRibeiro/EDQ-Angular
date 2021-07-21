@@ -7,10 +7,10 @@
 <div class="row d-flex justify-content-center">
   <div class="col-md-3 d-flex justify-content-center" *ngFor="let item of listaTemas1">
 
-    <div class="card mt-4" style="width: 95vh">
+    <div class="card bg-fundo mt-4" style="width: 95vh">
       <a [routerLink]="['/videopage', item.id]">
       <div class="card-header bg-color text-white text-center">{{item.materia}}</div>
-      <div class="card-body text-center bg-fundo">
+      <div class="card-body text-center">
         <p class="card-title">{{item.descricao}}</p>
       </div>
     </a>
@@ -18,17 +18,17 @@
 </div>
 </div>
 
-<div class="introduction2 d-flex justify-content-center mt-4">
+<div class="introduction2 d-flex justify-content-center mt-5">
   <h2 class="text-center">2º Ano</h2><br>
 </div>
 
 <div class="row d-flex justify-content-center">
   <div class="col-md-3 d-flex justify-content-center" *ngFor="let item of listaTemas2">
 
-    <div class="card mt-4" style="width: 95vh">
+    <div class="card bg-fundo mt-4" style="width: 95vh">
       <a [routerLink]="['/videopage', item.id]">
       <div class="card-header bg-color2 text-white text-center">{{item.materia}}</div>
-      <div class="card-body text-center bg-fundo">
+      <div class="card-body text-center">
         <p class="card-title">{{item.descricao}}</p>
       </div>
     </a>
@@ -36,18 +36,18 @@
 </div>
 </div>
 
-<div class="introduction3 d-flex justify-content-center mt-4 mb-4">
+<div class="introduction3 d-flex justify-content-center mt-5">
   <h2 class="text-center">3º Ano</h2><br>
 </div>
 
 <div class="row d-flex justify-content-center">
   <div class="col-md-3 d-flex justify-content-center" *ngFor="let item of listaTemas3">
 
-    <div class="card mt-4 mb-5" style="width: 95vh">
+    <div class="card bg-fundo mt-4" style="width: 95vh;">
       <a [routerLink]="['/videopage', item.id]">
       <div class="card-header bg-color3 text-white text-center">{{item.materia}}</div>
-      <div class="card-body text-center bg-fundo">
-        <p class="card-title">{{item.descricao}}</p>
+      <div class="card-body text-center">
+        <p>{{item.descricao}}</p>
       </div>
     </a>
 </div>

@@ -15,10 +15,10 @@ export class NavbarLoggedinComponent implements OnInit {
   id = environment.id
 
   semFoto() {
-    if(environment.foto == null){
-     this.foto = 'https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814049_960_720.png'
+    if(environment.foto == ''){
+     this.foto = 'https://i.imgur.com/2borZL9.png'
     }
-    else if (environment.foto == environment.foto) {
+    else{
       this.foto = environment.foto
     } 
   }
@@ -29,9 +29,9 @@ export class NavbarLoggedinComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    //console.log(this.foto)
+    console.log(this.foto)
     this.semFoto()
-    //console.log(this.foto)
+    console.log(this.foto)
   }
 
   sair(){

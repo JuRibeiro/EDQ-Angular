@@ -65,7 +65,7 @@
         <!-- SIDEBAR HEADER-->
         <div class="offcanvas-header bg-navbar text-white">
             <h6 class="offcanvas-title ms-2 text-center" id="offcanvasExampleLabel"><a class="navbar-brand"
-                    href="#home"><img src="../../assets/img/EDQbrancoAjustado.png" width="60px" alt="Logo EDQ"></a><br>A
+                routerLink='/plataforma' data-bs-dismiss="offcanvas"><img src="../../assets/img/EDQbrancoAjustado.png" width="60px" alt="Logo EDQ"></a><br>A
                 plataforma que iguala seu conhecimento
             </h6>
             <button type="button mb-5" class="btn-close btn-outline-light text-reset" data-bs-dismiss="offcanvas"
@@ -85,14 +85,9 @@
             <hr *ngIf='auth.adm()'>
 
             <a *ngIf='auth.adm()' class="text-reset  text-decoration-none mb-3" data-bs-dismiss="offcanvas" routerLink='/postagens'>
-                <h5>Postagens</h5>
+                <h5>Aulas</h5>
             </a>
             <hr *ngIf='auth.adm()'>
-
-            <!-- <a class="text-reset mb-3" data-bs-dismiss="offcanvas" href="">
-                <h5>Professores</h5>
-            </a>
-            <hr> -->
         </div>
 
 
@@ -104,9 +99,9 @@
                         data-bs-toggle="dropdown" aria-expanded="false"><img src={{foto}} alt="Foto de perfil" width="45px"
                             height="45px" class="rounded-circle border border-white border-4">⠀{{nome}}
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-light"
+                    <ul class="dropdown-menu dropdown-menu-lg-center"
                         aria-labelledby="navbarDarkDropdownMenuLink">
-                        <li><a class="dropdown-item text-center" [routerLink]="['/user-edit', id]">Editar Usuário</a>
+                        <li><a class="dropdown-item text-center" data-bs-dismiss="offcanvas" [routerLink]="['/user-edit', id]">Editar Usuário</a>
                         </li>
                     </ul>
                 </div>
